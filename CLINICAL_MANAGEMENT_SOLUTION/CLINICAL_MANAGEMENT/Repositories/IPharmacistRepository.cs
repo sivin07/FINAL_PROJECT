@@ -2,5 +2,9 @@
 {
     public interface IPharmacistRepository
     {
+
+        //dfihbgvodygfbvpbhsdbfpppppppibgsdphibgvshdbvdsbhvhvbgv
+        //fnrydfvos8ybhpvfgrvbgyvbfgvbfgvbfgvbgfypgvb
+        //hurgfvdhpgerfbvugdbrgehfhbvuregbfregybuufergy9frgedbfrehgudyerfhudrefhud  
     }
 }
