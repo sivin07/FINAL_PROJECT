@@ -1,4 +1,7 @@
-
+using CLINICAL_MANAGEMENT.Models;
+using CLINICAL_MANAGEMENT.Repository;
+using CLINICAL_MANAGEMENT.Service;
+using Microsoft.EntityFrameworkCore;
 namespace CLINICAL_MANAGEMENT
 {
     public class Program
@@ -7,6 +10,11 @@ namespace CLINICAL_MANAGEMENT
         {
             var builder = WebApplication.CreateBuilder(args);
 
+            // Add DbContext
+            builder.Services.AddDbContext<CmsContext>(options =>
+                options.UseSqlServer(builder.Configuration.GetConnectionString("ApiConnection")));
+            builder.Services.AddScoped<IReceptionRepository, ReceptionRepositoryImpl>();
+            builder.Services.AddScoped<IReceptionService, ReceptionServiceImpl>();
             // Add services to the container.
 
             builder.Services.AddControllers();
@@ -14,9 +22,10 @@ namespace CLINICAL_MANAGEMENT
             builder.Services.AddEndpointsApiExplorer();
             builder.Services.AddSwaggerGen();
 
+            
+            
 
 
-          
 
             var app = builder.Build();
 
