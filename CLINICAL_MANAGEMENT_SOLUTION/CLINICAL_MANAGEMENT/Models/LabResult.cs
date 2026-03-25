@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Text.Json.Serialization;
 
 namespace CLINICAL_MANAGEMENT.Models;
 
@@ -21,6 +22,7 @@ public partial class LabResult
 
     public string? NormalRange { get; set; }
 
+    [JsonIgnore]
     public virtual ICollection<LabTestResultBill> LabTestResultBills { get; set; } = new List<LabTestResultBill>();
 
     public virtual Patient Patient { get; set; } = null!;

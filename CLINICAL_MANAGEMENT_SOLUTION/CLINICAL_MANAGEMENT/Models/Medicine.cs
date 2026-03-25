@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Text.Json.Serialization;
 
 namespace CLINICAL_MANAGEMENT.Models;
 
@@ -21,7 +22,9 @@ public partial class Medicine
 
     public virtual Category? Category { get; set; }
 
+    [JsonIgnore]
     public virtual ICollection<IssuedMedicine> IssuedMedicines { get; set; } = new List<IssuedMedicine>();
 
+    [JsonIgnore]
     public virtual ICollection<MedPrescription> MedPrescriptions { get; set; } = new List<MedPrescription>();
 }

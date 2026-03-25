@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Text.Json.Serialization;
 
 namespace CLINICAL_MANAGEMENT.Models;
 
@@ -21,14 +22,18 @@ public partial class Appointment
 
     public int? SlotId { get; set; }
 
+    [JsonIgnore]
     public virtual ICollection<DiagnosisDetail> DiagnosisDetails { get; set; } = new List<DiagnosisDetail>();
 
     public virtual Doctor Doctor { get; set; } = null!;
 
+    [JsonIgnore]
     public virtual ICollection<IssuedMedicine> IssuedMedicines { get; set; } = new List<IssuedMedicine>();
 
+    [JsonIgnore]
     public virtual ICollection<LabTestPrescription> LabTestPrescriptions { get; set; } = new List<LabTestPrescription>();
 
+    [JsonIgnore]
     public virtual ICollection<MedPrescription> MedPrescriptions { get; set; } = new List<MedPrescription>();
 
     public virtual Patient Patient { get; set; } = null!;
