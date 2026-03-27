@@ -4,3 +4,11 @@ obj/
 *.db
 *.cache
 *.vsidx
+
+.vs/
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+bin/
+obj/
