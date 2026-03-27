@@ -1,6 +1,7 @@
 ﻿using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
+using System.Text.Json.Serialization;
 
 namespace CLINICAL_MANAGEMENT.Models;
 
@@ -29,6 +30,10 @@ public partial class IssuedMedicine
     public virtual Doctor? Doctor { get; set; }
 
     public virtual Medicine? Medicine { get; set; }
+<<<<<<< HEAD
+=======
+
+>>>>>>> labtech
     [JsonIgnore]
     public virtual ICollection<MedicineBill> MedicineBills { get; set; } = new List<MedicineBill>();
 
