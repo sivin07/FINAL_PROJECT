@@ -108,6 +108,127 @@
           }
         }
       }
+    },
+    "/api/Pharmacist/prescriptions/pending": {
+      "get": {
+        "tags": [
+          "Pharmacist"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/Pharmacist/prescriptions/issued": {
+      "get": {
+        "tags": [
+          "Pharmacist"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/Pharmacist/prescriptions/search": {
+      "get": {
+        "tags": [
+          "Pharmacist"
+        ],
+        "parameters": [
+          {
+            "name": "query",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "status",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/Pharmacist/prescriptions/issue/{id}": {
+      "post": {
+        "tags": [
+          "Pharmacist"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/Pharmacist/prescriptions/details/{appointmentId}": {
+      "get": {
+        "tags": [
+          "Pharmacist"
+        ],
+        "parameters": [
+          {
+            "name": "appointmentId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/Pharmacist/bill/{patientId}": {
+      "get": {
+        "tags": [
+          "Pharmacist"
+        ],
+        "parameters": [
+          {
+            "name": "patientId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
     }
   },
   "components": {
@@ -317,9 +438,6 @@
             },
             "nullable": true
           },
-          "dept": {
-            "$ref": "#/components/schemas/Department"
-          },
           "diagnosisDetails": {
             "type": "array",
             "items": {
@@ -361,6 +479,9 @@
               "$ref": "#/components/schemas/Qualification"
             },
             "nullable": true
+          },
+          "department": {
+            "$ref": "#/components/schemas/Department"
           },
           "specialization": {
             "$ref": "#/components/schemas/Specialization"

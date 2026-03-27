@@ -1,6 +1,22 @@
 [
   {
     "ContainingType": "CLINICAL_MANAGEMENT.Controllers.PharmacistController",
+    "Method": "GetBill",
+    "RelativePath": "api/Pharmacist/bill/{patientId}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "patientId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "CLINICAL_MANAGEMENT.Controllers.PharmacistController",
     "Method": "GetAllMedicines",
     "RelativePath": "api/Pharmacist/medicines",
     "HttpMethod": "GET",
@@ -58,6 +74,79 @@
         "Name": "medicine",
         "Type": "CLINICAL_MANAGEMENT.Models.Medicine",
         "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "CLINICAL_MANAGEMENT.Controllers.PharmacistController",
+    "Method": "GetPrescriptionDetails",
+    "RelativePath": "api/Pharmacist/prescriptions/details/{appointmentId}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "appointmentId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "CLINICAL_MANAGEMENT.Controllers.PharmacistController",
+    "Method": "IssuePrescription",
+    "RelativePath": "api/Pharmacist/prescriptions/issue/{id}",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "CLINICAL_MANAGEMENT.Controllers.PharmacistController",
+    "Method": "GetIssuedPrescriptions",
+    "RelativePath": "api/Pharmacist/prescriptions/issued",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "CLINICAL_MANAGEMENT.Controllers.PharmacistController",
+    "Method": "GetPendingPrescriptions",
+    "RelativePath": "api/Pharmacist/prescriptions/pending",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "CLINICAL_MANAGEMENT.Controllers.PharmacistController",
+    "Method": "SearchPrescriptions",
+    "RelativePath": "api/Pharmacist/prescriptions/search",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "query",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "status",
+        "Type": "System.String",
+        "IsRequired": false
       }
     ],
     "ReturnTypes": []
