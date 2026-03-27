@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Newtonsoft.Json;
+using System;
 using System.Collections.Generic;
 
 namespace CLINICAL_MANAGEMENT.Models;
@@ -18,6 +19,8 @@ public partial class DoctorSlot
     public bool? IsBooked { get; set; }
 
     public int? PatientId { get; set; }
+
+    [JsonIgnore]
 
     public virtual ICollection<Appointment> Appointments { get; set; } = new List<Appointment>();
 

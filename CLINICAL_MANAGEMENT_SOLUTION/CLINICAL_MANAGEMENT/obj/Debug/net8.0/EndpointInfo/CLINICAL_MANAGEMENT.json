@@ -1,0 +1,1164 @@
+{
+  "openapi": "3.0.1",
+  "info": {
+    "title": "CLINICAL_MANAGEMENT",
+    "version": "1.0"
+  },
+  "paths": {
+    "/api/Pharmacist/medicines": {
+      "get": {
+        "tags": [
+          "Pharmacist"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      },
+      "post": {
+        "tags": [
+          "Pharmacist"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Medicine"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Medicine"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/Medicine"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/Pharmacist/medicines/{id}": {
+      "get": {
+        "tags": [
+          "Pharmacist"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      },
+      "put": {
+        "tags": [
+          "Pharmacist"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Medicine"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Medicine"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/Medicine"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/Pharmacist/prescriptions/pending": {
+      "get": {
+        "tags": [
+          "Pharmacist"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/Pharmacist/prescriptions/issued": {
+      "get": {
+        "tags": [
+          "Pharmacist"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/Pharmacist/prescriptions/search": {
+      "get": {
+        "tags": [
+          "Pharmacist"
+        ],
+        "parameters": [
+          {
+            "name": "query",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "status",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/Pharmacist/prescriptions/issue/{id}": {
+      "post": {
+        "tags": [
+          "Pharmacist"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/Pharmacist/prescriptions/details/{appointmentId}": {
+      "get": {
+        "tags": [
+          "Pharmacist"
+        ],
+        "parameters": [
+          {
+            "name": "appointmentId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/Pharmacist/bill/{patientId}": {
+      "get": {
+        "tags": [
+          "Pharmacist"
+        ],
+        "parameters": [
+          {
+            "name": "patientId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "Appointment": {
+        "type": "object",
+        "properties": {
+          "appointmentId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "patientId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "doctorId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "tokenNumber": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
+          },
+          "appointmentDate": {
+            "type": "string",
+            "format": "date"
+          },
+          "status": {
+            "type": "string",
+            "nullable": true
+          },
+          "consultationBill": {
+            "type": "number",
+            "format": "double",
+            "nullable": true
+          },
+          "slotId": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
+          },
+          "diagnosisDetails": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/DiagnosisDetail"
+            },
+            "nullable": true
+          },
+          "doctor": {
+            "$ref": "#/components/schemas/Doctor"
+          },
+          "issuedMedicines": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/IssuedMedicine"
+            },
+            "nullable": true
+          },
+          "labTestPrescriptions": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/LabTestPrescription"
+            },
+            "nullable": true
+          },
+          "medPrescriptions": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/MedPrescription"
+            },
+            "nullable": true
+          },
+          "patient": {
+            "$ref": "#/components/schemas/Patient"
+          },
+          "slot": {
+            "$ref": "#/components/schemas/DoctorSlot"
+          }
+        },
+        "additionalProperties": false
+      },
+      "Category": {
+        "type": "object",
+        "properties": {
+          "categoryId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "categoryName": {
+            "type": "string",
+            "nullable": true
+          },
+          "medicines": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/Medicine"
+            },
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "Department": {
+        "type": "object",
+        "properties": {
+          "deptId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "deptName": {
+            "type": "string",
+            "nullable": true
+          },
+          "doctors": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/Doctor"
+            },
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "DiagnosisDetail": {
+        "type": "object",
+        "properties": {
+          "diagnosisId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "appointmentId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "patientId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "doctorId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "symptoms": {
+            "type": "string",
+            "nullable": true
+          },
+          "diagnosis": {
+            "type": "string",
+            "nullable": true
+          },
+          "doctorNotes": {
+            "type": "string",
+            "nullable": true
+          },
+          "date": {
+            "type": "string",
+            "format": "date-time",
+            "nullable": true
+          },
+          "appointment": {
+            "$ref": "#/components/schemas/Appointment"
+          },
+          "doctor": {
+            "$ref": "#/components/schemas/Doctor"
+          },
+          "patient": {
+            "$ref": "#/components/schemas/Patient"
+          }
+        },
+        "additionalProperties": false
+      },
+      "Doctor": {
+        "type": "object",
+        "properties": {
+          "doctorId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "staffId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "qualification": {
+            "type": "string",
+            "nullable": true
+          },
+          "deptId": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
+          },
+          "specializationId": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
+          },
+          "consultationFees": {
+            "type": "number",
+            "format": "double",
+            "nullable": true
+          },
+          "appointments": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/Appointment"
+            },
+            "nullable": true
+          },
+          "diagnosisDetails": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/DiagnosisDetail"
+            },
+            "nullable": true
+          },
+          "doctorSlots": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/DoctorSlot"
+            },
+            "nullable": true
+          },
+          "issuedMedicines": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/IssuedMedicine"
+            },
+            "nullable": true
+          },
+          "labTestPrescriptions": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/LabTestPrescription"
+            },
+            "nullable": true
+          },
+          "medPrescriptions": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/MedPrescription"
+            },
+            "nullable": true
+          },
+          "qualifications": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/Qualification"
+            },
+            "nullable": true
+          },
+          "department": {
+            "$ref": "#/components/schemas/Department"
+          },
+          "specialization": {
+            "$ref": "#/components/schemas/Specialization"
+          },
+          "staff": {
+            "$ref": "#/components/schemas/Staff"
+          }
+        },
+        "additionalProperties": false
+      },
+      "DoctorSlot": {
+        "type": "object",
+        "properties": {
+          "slotId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "doctorId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "slotDate": {
+            "type": "string",
+            "format": "date"
+          },
+          "startTime": {
+            "type": "string",
+            "format": "time"
+          },
+          "endTime": {
+            "type": "string",
+            "format": "time"
+          },
+          "isBooked": {
+            "type": "boolean",
+            "nullable": true
+          },
+          "patientId": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
+          },
+          "appointments": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/Appointment"
+            },
+            "nullable": true
+          },
+          "doctor": {
+            "$ref": "#/components/schemas/Doctor"
+          },
+          "patient": {
+            "$ref": "#/components/schemas/Patient"
+          }
+        },
+        "additionalProperties": false
+      },
+      "IssuedMedicine": {
+        "type": "object",
+        "properties": {
+          "issuedId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "appointmentId": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
+          },
+          "patientId": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
+          },
+          "doctorId": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
+          },
+          "medicineId": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
+          },
+          "quantityIssued": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
+          },
+          "dosage": {
+            "type": "string",
+            "nullable": true
+          },
+          "issueDate": {
+            "type": "string",
+            "format": "date-time",
+            "nullable": true
+          },
+          "prescriptionId": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
+          },
+          "appointment": {
+            "$ref": "#/components/schemas/Appointment"
+          },
+          "doctor": {
+            "$ref": "#/components/schemas/Doctor"
+          },
+          "medicine": {
+            "$ref": "#/components/schemas/Medicine"
+          },
+          "medicineBills": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/MedicineBill"
+            },
+            "nullable": true
+          },
+          "patient": {
+            "$ref": "#/components/schemas/Patient"
+          },
+          "prescription": {
+            "$ref": "#/components/schemas/MedPrescription"
+          }
+        },
+        "additionalProperties": false
+      },
+      "LabResult": {
+        "type": "object",
+        "properties": {
+          "resultId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "testId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "patientId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "actualValue": {
+            "type": "number",
+            "format": "double",
+            "nullable": true
+          },
+          "remarks": {
+            "type": "string",
+            "nullable": true
+          },
+          "doctorReview": {
+            "type": "string",
+            "nullable": true
+          },
+          "date": {
+            "type": "string",
+            "format": "date-time",
+            "nullable": true
+          },
+          "normalRange": {
+            "type": "string",
+            "nullable": true
+          },
+          "labTestResultBills": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/LabTestResultBill"
+            },
+            "nullable": true
+          },
+          "patient": {
+            "$ref": "#/components/schemas/Patient"
+          },
+          "test": {
+            "$ref": "#/components/schemas/LabTest"
+          }
+        },
+        "additionalProperties": false
+      },
+      "LabTest": {
+        "type": "object",
+        "properties": {
+          "testId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "testName": {
+            "type": "string",
+            "nullable": true
+          },
+          "price": {
+            "type": "number",
+            "format": "double",
+            "nullable": true
+          },
+          "sampleType": {
+            "type": "string",
+            "nullable": true
+          },
+          "normalRange": {
+            "type": "string",
+            "nullable": true
+          },
+          "labResults": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/LabResult"
+            },
+            "nullable": true
+          },
+          "labTestPrescriptions": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/LabTestPrescription"
+            },
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "LabTestPrescription": {
+        "type": "object",
+        "properties": {
+          "prescriptionId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "appointmentId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "patientId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "doctorId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "testId": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
+          },
+          "testName": {
+            "type": "string",
+            "nullable": true
+          },
+          "quantity": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "prescribedDate": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "status": {
+            "type": "string",
+            "nullable": true
+          },
+          "resultText": {
+            "type": "string",
+            "nullable": true
+          },
+          "resultDate": {
+            "type": "string",
+            "format": "date-time",
+            "nullable": true
+          },
+          "appointment": {
+            "$ref": "#/components/schemas/Appointment"
+          },
+          "doctor": {
+            "$ref": "#/components/schemas/Doctor"
+          },
+          "patient": {
+            "$ref": "#/components/schemas/Patient"
+          },
+          "test": {
+            "$ref": "#/components/schemas/LabTest"
+          }
+        },
+        "additionalProperties": false
+      },
+      "LabTestResultBill": {
+        "type": "object",
+        "properties": {
+          "labTestBillId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "resultId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "labTestBill": {
+            "type": "number",
+            "format": "double"
+          },
+          "result": {
+            "$ref": "#/components/schemas/LabResult"
+          }
+        },
+        "additionalProperties": false
+      },
+      "MedPrescription": {
+        "type": "object",
+        "properties": {
+          "prescriptionId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "appointmentId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "patientId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "doctorId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "medicineId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "quantity": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "frequency": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
+          },
+          "durationDays": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "prescribedDate": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "status": {
+            "type": "string",
+            "nullable": true
+          },
+          "dosage": {
+            "type": "string",
+            "nullable": true
+          },
+          "appointment": {
+            "$ref": "#/components/schemas/Appointment"
+          },
+          "doctor": {
+            "$ref": "#/components/schemas/Doctor"
+          },
+          "issuedMedicines": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/IssuedMedicine"
+            },
+            "nullable": true
+          },
+          "medicine": {
+            "$ref": "#/components/schemas/Medicine"
+          },
+          "patient": {
+            "$ref": "#/components/schemas/Patient"
+          }
+        },
+        "additionalProperties": false
+      },
+      "Medicine": {
+        "type": "object",
+        "properties": {
+          "medicineId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "medicineName": {
+            "type": "string",
+            "nullable": true
+          },
+          "medicineDescription": {
+            "type": "string",
+            "nullable": true
+          },
+          "quantity": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
+          },
+          "expiryDate": {
+            "type": "string",
+            "format": "date",
+            "nullable": true
+          },
+          "price": {
+            "type": "number",
+            "format": "double",
+            "nullable": true
+          },
+          "categoryId": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
+          },
+          "category": {
+            "$ref": "#/components/schemas/Category"
+          },
+          "issuedMedicines": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/IssuedMedicine"
+            },
+            "nullable": true
+          },
+          "medPrescriptions": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/MedPrescription"
+            },
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "MedicineBill": {
+        "type": "object",
+        "properties": {
+          "medicineBillId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "issuedMedicineId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "bill": {
+            "type": "number",
+            "format": "double"
+          },
+          "issuedMedicine": {
+            "$ref": "#/components/schemas/IssuedMedicine"
+          }
+        },
+        "additionalProperties": false
+      },
+      "Patient": {
+        "type": "object",
+        "properties": {
+          "patientId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "mmrno": {
+            "type": "string",
+            "nullable": true
+          },
+          "name": {
+            "type": "string",
+            "nullable": true
+          },
+          "address": {
+            "type": "string",
+            "nullable": true
+          },
+          "gender": {
+            "type": "string",
+            "nullable": true
+          },
+          "dob": {
+            "type": "string",
+            "format": "date",
+            "nullable": true
+          },
+          "bloodGroup": {
+            "type": "string",
+            "nullable": true
+          },
+          "phone": {
+            "type": "string",
+            "nullable": true
+          },
+          "status": {
+            "type": "string",
+            "nullable": true
+          },
+          "email": {
+            "type": "string",
+            "nullable": true
+          },
+          "appointments": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/Appointment"
+            },
+            "nullable": true
+          },
+          "diagnosisDetails": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/DiagnosisDetail"
+            },
+            "nullable": true
+          },
+          "doctorSlots": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/DoctorSlot"
+            },
+            "nullable": true
+          },
+          "issuedMedicines": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/IssuedMedicine"
+            },
+            "nullable": true
+          },
+          "labResults": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/LabResult"
+            },
+            "nullable": true
+          },
+          "labTestPrescriptions": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/LabTestPrescription"
+            },
+            "nullable": true
+          },
+          "medPrescriptions": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/MedPrescription"
+            },
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "Qualification": {
+        "type": "object",
+        "properties": {
+          "qualificationId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "doctorId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "degreeName": {
+            "type": "string",
+            "nullable": true
+          },
+          "universityName": {
+            "type": "string",
+            "nullable": true
+          },
+          "doctor": {
+            "$ref": "#/components/schemas/Doctor"
+          }
+        },
+        "additionalProperties": false
+      },
+      "Role": {
+        "type": "object",
+        "properties": {
+          "roleId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "roleName": {
+            "type": "string",
+            "nullable": true
+          },
+          "staff": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/Staff"
+            },
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "Specialization": {
+        "type": "object",
+        "properties": {
+          "specializationId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "name": {
+            "type": "string",
+            "nullable": true
+          },
+          "doctors": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/Doctor"
+            },
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "Staff": {
+        "type": "object",
+        "properties": {
+          "staffId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "name": {
+            "type": "string",
+            "nullable": true
+          },
+          "email": {
+            "type": "string",
+            "nullable": true
+          },
+          "dob": {
+            "type": "string",
+            "format": "date"
+          },
+          "doj": {
+            "type": "string",
+            "format": "date"
+          },
+          "address": {
+            "type": "string",
+            "nullable": true
+          },
+          "gender": {
+            "type": "string",
+            "nullable": true
+          },
+          "phone": {
+            "type": "string",
+            "nullable": true
+          },
+          "roleId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "username": {
+            "type": "string",
+            "nullable": true
+          },
+          "password": {
+            "type": "string",
+            "nullable": true
+          },
+          "status": {
+            "type": "string",
+            "nullable": true
+          },
+          "doctor": {
+            "$ref": "#/components/schemas/Doctor"
+          },
+          "role": {
+            "$ref": "#/components/schemas/Role"
+          }
+        },
+        "additionalProperties": false
+      }
+    }
+  }
+}

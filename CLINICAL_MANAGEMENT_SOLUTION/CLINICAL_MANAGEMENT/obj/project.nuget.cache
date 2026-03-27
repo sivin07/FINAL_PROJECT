@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "rwwZShFP9KI=",
+  "dgSpecHash": "6Mk25OssGjk=",
   "success": true,
-  "projectFilePath": "C:\\Users\\SIVIN\\PROJECTS\\DOTNET_FINAL_PROJECT\\CLINICAL_MANAGEMENT_SOLUTION\\CLINICAL_MANAGEMENT\\CLINICAL_MANAGEMENT.csproj",
+  "projectFilePath": "C:\\Users\\SIVIN\\PROJECTS\\PHARMACY_FINAL_PROJECT\\FINAL_PROJECT\\CLINICAL_MANAGEMENT_SOLUTION\\CLINICAL_MANAGEMENT\\CLINICAL_MANAGEMENT.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\SIVIN\\.nuget\\packages\\azure.core\\1.38.0\\azure.core.1.38.0.nupkg.sha512",
     "C:\\Users\\SIVIN\\.nuget\\packages\\azure.identity\\1.11.4\\azure.identity.1.11.4.nupkg.sha512",

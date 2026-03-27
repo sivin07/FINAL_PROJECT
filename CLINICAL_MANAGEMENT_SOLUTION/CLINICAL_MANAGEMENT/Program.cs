@@ -1,4 +1,10 @@
 
+using CLINICAL_MANAGEMENT.Models;
+using CLINICAL_MANAGEMENT.Repositories;
+using CLINICAL_MANAGEMENT.Services;
+using Microsoft.EntityFrameworkCore;
+using System.Text.Json.Serialization;
+
 namespace CLINICAL_MANAGEMENT
 {
     public class Program
@@ -15,8 +21,20 @@ namespace CLINICAL_MANAGEMENT
             builder.Services.AddSwaggerGen();
 
 
+          builder.Services.AddControllers()
+           .AddJsonOptions(x =>
+             x.JsonSerializerOptions.ReferenceHandler =
+             ReferenceHandler.IgnoreCycles);
 
-          
+
+            builder.Services.AddDbContext<CmsContext>(options =>
+                        options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection"))); 
+                builder.Services.AddScoped<IPharmacistRepository, PharmacistRepoImpl>();
+                builder.Services.AddScoped<IPharmacistService, PharmacistServiceImpl>();
+
+
+
+
 
             var app = builder.Build();
 
