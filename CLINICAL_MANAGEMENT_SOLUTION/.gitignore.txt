@@ -1,11 +1,4 @@
-.vs/
-bin/
-obj/
-*.db
-*.cache
-*.vsidx
 
-.vs/
 *.suo
 *.user
 *.userosscache
