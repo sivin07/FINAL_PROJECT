@@ -1,0 +1,153 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\hiban\\OneDrive\\Desktop\\faith\\Last project\\FINAL_PROJECT\\CLINICAL_MANAGEMENT_SOLUTION\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{494C15D4-98A1-41C6-8D58-2AAC3FF94CAD}|CLINICAL_MANAGEMENT\\CLINICAL_MANAGEMENT.csproj|c:\\users\\hiban\\onedrive\\desktop\\faith\\last project\\final_project\\clinical_management_solution\\clinical_management\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{494C15D4-98A1-41C6-8D58-2AAC3FF94CAD}|CLINICAL_MANAGEMENT\\CLINICAL_MANAGEMENT.csproj|solutionrelative:clinical_management\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{494C15D4-98A1-41C6-8D58-2AAC3FF94CAD}|CLINICAL_MANAGEMENT\\CLINICAL_MANAGEMENT.csproj|c:\\users\\hiban\\onedrive\\desktop\\faith\\last project\\final_project\\clinical_management_solution\\clinical_management\\controllers\\doctorcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{494C15D4-98A1-41C6-8D58-2AAC3FF94CAD}|CLINICAL_MANAGEMENT\\CLINICAL_MANAGEMENT.csproj|solutionrelative:clinical_management\\controllers\\doctorcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{494C15D4-98A1-41C6-8D58-2AAC3FF94CAD}|CLINICAL_MANAGEMENT\\CLINICAL_MANAGEMENT.csproj|c:\\users\\hiban\\onedrive\\desktop\\faith\\last project\\final_project\\clinical_management_solution\\clinical_management\\repositories\\doctorrepoimpl.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{494C15D4-98A1-41C6-8D58-2AAC3FF94CAD}|CLINICAL_MANAGEMENT\\CLINICAL_MANAGEMENT.csproj|solutionrelative:clinical_management\\repositories\\doctorrepoimpl.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{494C15D4-98A1-41C6-8D58-2AAC3FF94CAD}|CLINICAL_MANAGEMENT\\CLINICAL_MANAGEMENT.csproj|c:\\users\\hiban\\onedrive\\desktop\\faith\\last project\\final_project\\clinical_management_solution\\clinical_management\\services\\idoctorservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{494C15D4-98A1-41C6-8D58-2AAC3FF94CAD}|CLINICAL_MANAGEMENT\\CLINICAL_MANAGEMENT.csproj|solutionrelative:clinical_management\\services\\idoctorservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{494C15D4-98A1-41C6-8D58-2AAC3FF94CAD}|CLINICAL_MANAGEMENT\\CLINICAL_MANAGEMENT.csproj|c:\\users\\hiban\\onedrive\\desktop\\faith\\last project\\final_project\\clinical_management_solution\\clinical_management\\services\\doctorserviceimpl.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{494C15D4-98A1-41C6-8D58-2AAC3FF94CAD}|CLINICAL_MANAGEMENT\\CLINICAL_MANAGEMENT.csproj|solutionrelative:clinical_management\\services\\doctorserviceimpl.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{494C15D4-98A1-41C6-8D58-2AAC3FF94CAD}|CLINICAL_MANAGEMENT\\CLINICAL_MANAGEMENT.csproj|c:\\users\\hiban\\onedrive\\desktop\\faith\\last project\\final_project\\clinical_management_solution\\clinical_management\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{494C15D4-98A1-41C6-8D58-2AAC3FF94CAD}|CLINICAL_MANAGEMENT\\CLINICAL_MANAGEMENT.csproj|solutionrelative:clinical_management\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{494C15D4-98A1-41C6-8D58-2AAC3FF94CAD}|CLINICAL_MANAGEMENT\\CLINICAL_MANAGEMENT.csproj|c:\\users\\hiban\\onedrive\\desktop\\faith\\last project\\final_project\\clinical_management_solution\\clinical_management\\models\\cmscontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{494C15D4-98A1-41C6-8D58-2AAC3FF94CAD}|CLINICAL_MANAGEMENT\\CLINICAL_MANAGEMENT.csproj|solutionrelative:clinical_management\\models\\cmscontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{494C15D4-98A1-41C6-8D58-2AAC3FF94CAD}|CLINICAL_MANAGEMENT\\CLINICAL_MANAGEMENT.csproj|c:\\users\\hiban\\onedrive\\desktop\\faith\\last project\\final_project\\clinical_management_solution\\clinical_management\\clinical_management.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{494C15D4-98A1-41C6-8D58-2AAC3FF94CAD}|CLINICAL_MANAGEMENT\\CLINICAL_MANAGEMENT.csproj|solutionrelative:clinical_management\\clinical_management.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 6,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "IDoctorService.cs",
+              "DocumentMoniker": "C:\\Users\\hiban\\OneDrive\\Desktop\\faith\\Last project\\FINAL_PROJECT\\CLINICAL_MANAGEMENT_SOLUTION\\CLINICAL_MANAGEMENT\\Services\\IDoctorService.cs",
+              "RelativeDocumentMoniker": "CLINICAL_MANAGEMENT\\Services\\IDoctorService.cs",
+              "ToolTip": "C:\\Users\\hiban\\OneDrive\\Desktop\\faith\\Last project\\FINAL_PROJECT\\CLINICAL_MANAGEMENT_SOLUTION\\CLINICAL_MANAGEMENT\\Services\\IDoctorService.cs",
+              "RelativeToolTip": "CLINICAL_MANAGEMENT\\Services\\IDoctorService.cs",
+              "ViewState": "AgIAABIAAAAAAAAAAAAYwAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-27T12:18:45.865Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "C:\\Users\\hiban\\OneDrive\\Desktop\\faith\\Last project\\FINAL_PROJECT\\CLINICAL_MANAGEMENT_SOLUTION\\CLINICAL_MANAGEMENT\\appsettings.json",
+              "RelativeDocumentMoniker": "CLINICAL_MANAGEMENT\\appsettings.json",
+              "ToolTip": "C:\\Users\\hiban\\OneDrive\\Desktop\\faith\\Last project\\FINAL_PROJECT\\CLINICAL_MANAGEMENT_SOLUTION\\CLINICAL_MANAGEMENT\\appsettings.json",
+              "RelativeToolTip": "CLINICAL_MANAGEMENT\\appsettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAWAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2026-03-27T11:49:00.098Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "DoctorServiceImpl.cs",
+              "DocumentMoniker": "C:\\Users\\hiban\\OneDrive\\Desktop\\faith\\Last project\\FINAL_PROJECT\\CLINICAL_MANAGEMENT_SOLUTION\\CLINICAL_MANAGEMENT\\Services\\DoctorServiceImpl.cs",
+              "RelativeDocumentMoniker": "CLINICAL_MANAGEMENT\\Services\\DoctorServiceImpl.cs",
+              "ToolTip": "C:\\Users\\hiban\\OneDrive\\Desktop\\faith\\Last project\\FINAL_PROJECT\\CLINICAL_MANAGEMENT_SOLUTION\\CLINICAL_MANAGEMENT\\Services\\DoctorServiceImpl.cs",
+              "RelativeToolTip": "CLINICAL_MANAGEMENT\\Services\\DoctorServiceImpl.cs",
+              "ViewState": "AgIAAFUBAAAAAAAAAAAUwBMAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-27T10:35:29.255Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "DoctorRepoImpl.cs",
+              "DocumentMoniker": "C:\\Users\\hiban\\OneDrive\\Desktop\\faith\\Last project\\FINAL_PROJECT\\CLINICAL_MANAGEMENT_SOLUTION\\CLINICAL_MANAGEMENT\\Repositories\\DoctorRepoImpl.cs",
+              "RelativeDocumentMoniker": "CLINICAL_MANAGEMENT\\Repositories\\DoctorRepoImpl.cs",
+              "ToolTip": "C:\\Users\\hiban\\OneDrive\\Desktop\\faith\\Last project\\FINAL_PROJECT\\CLINICAL_MANAGEMENT_SOLUTION\\CLINICAL_MANAGEMENT\\Repositories\\DoctorRepoImpl.cs",
+              "RelativeToolTip": "CLINICAL_MANAGEMENT\\Repositories\\DoctorRepoImpl.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAAANAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-27T10:34:37.148Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "DoctorController.cs",
+              "DocumentMoniker": "C:\\Users\\hiban\\OneDrive\\Desktop\\faith\\Last project\\FINAL_PROJECT\\CLINICAL_MANAGEMENT_SOLUTION\\CLINICAL_MANAGEMENT\\Controllers\\DoctorController.cs",
+              "RelativeDocumentMoniker": "CLINICAL_MANAGEMENT\\Controllers\\DoctorController.cs",
+              "ToolTip": "C:\\Users\\hiban\\OneDrive\\Desktop\\faith\\Last project\\FINAL_PROJECT\\CLINICAL_MANAGEMENT_SOLUTION\\CLINICAL_MANAGEMENT\\Controllers\\DoctorController.cs",
+              "RelativeToolTip": "CLINICAL_MANAGEMENT\\Controllers\\DoctorController.cs",
+              "ViewState": "AgIAAA4AAAAAAAAAAAAAwDkBAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-23T12:28:37.09Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\hiban\\OneDrive\\Desktop\\faith\\Last project\\FINAL_PROJECT\\CLINICAL_MANAGEMENT_SOLUTION\\CLINICAL_MANAGEMENT\\Program.cs",
+              "RelativeDocumentMoniker": "CLINICAL_MANAGEMENT\\Program.cs",
+              "ToolTip": "C:\\Users\\hiban\\OneDrive\\Desktop\\faith\\Last project\\FINAL_PROJECT\\CLINICAL_MANAGEMENT_SOLUTION\\CLINICAL_MANAGEMENT\\Program.cs",
+              "RelativeToolTip": "CLINICAL_MANAGEMENT\\Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-23T12:15:50.808Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "CmsContext.cs",
+              "DocumentMoniker": "C:\\Users\\hiban\\OneDrive\\Desktop\\faith\\Last project\\FINAL_PROJECT\\CLINICAL_MANAGEMENT_SOLUTION\\CLINICAL_MANAGEMENT\\Models\\CmsContext.cs",
+              "RelativeDocumentMoniker": "CLINICAL_MANAGEMENT\\Models\\CmsContext.cs",
+              "ToolTip": "C:\\Users\\hiban\\OneDrive\\Desktop\\faith\\Last project\\FINAL_PROJECT\\CLINICAL_MANAGEMENT_SOLUTION\\CLINICAL_MANAGEMENT\\Models\\CmsContext.cs",
+              "RelativeToolTip": "CLINICAL_MANAGEMENT\\Models\\CmsContext.cs",
+              "ViewState": "AgIAANkBAAAAAAAAAAAQwPABAAAhAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-23T12:09:41.667Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "CLINICAL_MANAGEMENT.csproj",
+              "DocumentMoniker": "C:\\Users\\hiban\\OneDrive\\Desktop\\faith\\Last project\\FINAL_PROJECT\\CLINICAL_MANAGEMENT_SOLUTION\\CLINICAL_MANAGEMENT\\CLINICAL_MANAGEMENT.csproj",
+              "RelativeDocumentMoniker": "CLINICAL_MANAGEMENT\\CLINICAL_MANAGEMENT.csproj",
+              "ToolTip": "C:\\Users\\hiban\\OneDrive\\Desktop\\faith\\Last project\\FINAL_PROJECT\\CLINICAL_MANAGEMENT_SOLUTION\\CLINICAL_MANAGEMENT\\CLINICAL_MANAGEMENT.csproj",
+              "RelativeToolTip": "CLINICAL_MANAGEMENT\\CLINICAL_MANAGEMENT.csproj",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABgAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2026-03-23T11:21:58.738Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
