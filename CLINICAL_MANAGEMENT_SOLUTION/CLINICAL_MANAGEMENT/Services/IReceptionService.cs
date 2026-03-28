@@ -1,6 +1,13 @@
-﻿namespace CLINICAL_MANAGEMENT.Services
+﻿using CLINICAL_MANAGEMENT.Models;
+
+namespace CLINICAL_MANAGEMENT.Service
 {
     public interface IReceptionService
     {
+        Task<IEnumerable<Patient>> GetAllPatients();
+        Task<Patient?> GetPatientById(int id);
+        Task<Patient> AddPatient(Patient patient);
+        Task<bool> UpdatePatient(Patient patient);
+        Task<bool> DeletePatient(int id);
     }
 }

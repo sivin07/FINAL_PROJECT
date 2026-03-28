@@ -1,6 +1,6 @@
-﻿using CLINICAL_MANAGEMENT.Repositories;
+﻿using CLINICAL_MANAGEMENT.Models;
+using CLINICAL_MANAGEMENT.Repositories;
 using CLINICAL_MANAGEMENT.Services;
-using CLINICAL_MANAGEMENT.Models;
 using Microsoft.EntityFrameworkCore;
 using System.Text.Json.Serialization;
 
@@ -18,15 +18,14 @@ namespace CLINICAL_MANAGEMENT
                 {
                     options.JsonSerializerOptions.PropertyNamingPolicy = null;
                     options.JsonSerializerOptions.WriteIndented = true;
-                    options.JsonSerializerOptions.Converters.Add(
-                        new JsonStringEnumConverter());
+                    options.JsonSerializerOptions.Converters.Add(new JsonStringEnumConverter());
                     options.JsonSerializerOptions.DefaultIgnoreCondition =
                         JsonIgnoreCondition.WhenWritingNull;
                     options.JsonSerializerOptions.ReferenceHandler =
                         ReferenceHandler.IgnoreCycles;
                 });
 
-            // DbContext
+            // DbContext (ONLY ONE)
             builder.Services.AddDbContext<CmsContext>(options =>
                 options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
 
@@ -41,6 +40,10 @@ namespace CLINICAL_MANAGEMENT
             // ───────── Pharmacist Module ─────────
             builder.Services.AddScoped<IPharmacistRepository, PharmacistRepoImpl>();
             builder.Services.AddScoped<IPharmacistService, PharmacistServiceImpl>();
+
+            // ───────── Reception Module ─────────
+            builder.Services.AddScoped<IReceptionRepository, ReceptionRepositoryImpl>();
+            builder.Services.AddScoped<IReceptionService, ReceptionServiceImpl>();
 
             // Swagger
             builder.Services.AddEndpointsApiExplorer();
