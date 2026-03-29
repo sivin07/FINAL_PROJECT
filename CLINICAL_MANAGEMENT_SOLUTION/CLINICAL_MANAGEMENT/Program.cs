@@ -1,7 +1,12 @@
 ﻿using CLINICAL_MANAGEMENT.Models;
 using CLINICAL_MANAGEMENT.Repositories;
+using CLINICAL_MANAGEMENT.Repository;
+using CLINICAL_MANAGEMENT.Service;
 using CLINICAL_MANAGEMENT.Services;
+using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.IdentityModel.Tokens;
+using System.Text;
 using System.Text.Json.Serialization;
 
 namespace CLINICAL_MANAGEMENT
@@ -25,9 +30,23 @@ namespace CLINICAL_MANAGEMENT
                         ReferenceHandler.IgnoreCycles;
                 });
 
+            builder.Services.AddCors(options =>
+            {
+                options.AddPolicy("AllowAngular",
+                    policy =>
+                    {
+                        policy.WithOrigins("http://localhost:4200") // Angular URL
+                              .AllowAnyHeader()
+                              .AllowAnyMethod();
+                    });
+            });
+
             // DbContext (ONLY ONE)
             builder.Services.AddDbContext<CmsContext>(options =>
                 options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
+
+            builder.Services.AddScoped<IAuthRepository, AuthRepoImpl>();
+            builder.Services.AddScoped<IAuthService, AuthServiceImpl>();
 
             // ───────── Lab Technician Module ─────────
             builder.Services.AddScoped<ILabTechnicianRepository, LabTechRepositoryImpl>();
@@ -45,6 +64,32 @@ namespace CLINICAL_MANAGEMENT
             builder.Services.AddScoped<IReceptionRepository, ReceptionRepositoryImpl>();
             builder.Services.AddScoped<IReceptionService, ReceptionServiceImpl>();
 
+
+
+       
+            var jwtSettings = builder.Configuration.GetSection("Jwt");
+
+            builder.Services.AddAuthentication(options =>
+            {
+                options.DefaultAuthenticateScheme = JwtBearerDefaults.AuthenticationScheme;
+                options.DefaultChallengeScheme = JwtBearerDefaults.AuthenticationScheme;
+            })
+            .AddJwtBearer(options =>
+            {
+                options.TokenValidationParameters = new TokenValidationParameters
+                {
+                    ValidateIssuer = true,
+                    ValidateAudience = true,
+                    ValidateLifetime = true,
+                    ValidateIssuerSigningKey = true,
+
+                    ValidIssuer = jwtSettings["Jwt:Issuer"],
+                    ValidAudience = jwtSettings["Jwt:Audience"],
+                    IssuerSigningKey = new SymmetricSecurityKey(
+                        Encoding.UTF8.GetBytes(builder.Configuration["Jwt:Key"]))
+                };
+            });
+
             // Swagger
             builder.Services.AddEndpointsApiExplorer();
             builder.Services.AddSwaggerGen();
@@ -59,6 +104,8 @@ namespace CLINICAL_MANAGEMENT
             }
 
             app.UseHttpsRedirection();
+            app.UseCors("AllowAngular");
+            app.UseCors("AllowAngular");
             app.UseAuthorization();
             app.MapControllers();
             app.Run();
