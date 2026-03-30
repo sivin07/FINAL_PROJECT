@@ -2,6 +2,7 @@ using CLINICAL_MANAGEMENT.Models;
 using CLINICAL_MANAGEMENT.Repository;
 using CLINICAL_MANAGEMENT.Service;
 using Microsoft.EntityFrameworkCore;
+
 namespace CLINICAL_MANAGEMENT
 {
     public class Program
@@ -13,23 +14,38 @@ namespace CLINICAL_MANAGEMENT
             // Add DbContext
             builder.Services.AddDbContext<CmsContext>(options =>
                 options.UseSqlServer(builder.Configuration.GetConnectionString("ApiConnection")));
+
+            // DI
             builder.Services.AddScoped<IReceptionRepository, ReceptionRepositoryImpl>();
             builder.Services.AddScoped<IReceptionService, ReceptionServiceImpl>();
-            // Add services to the container.
 
-            builder.Services.AddControllers();
-            // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
+            // Controllers
+            builder.Services.AddControllers()
+                    .AddJsonOptions(options =>
+                    {
+                        options.JsonSerializerOptions.ReferenceHandler =
+                            System.Text.Json.Serialization.ReferenceHandler.IgnoreCycles;
+                    });
+
+            // Swagger
             builder.Services.AddEndpointsApiExplorer();
             builder.Services.AddSwaggerGen();
 
-            
-            
-
-
+            // ? ADD CORS HERE
+            builder.Services.AddCors(options =>
+            {
+                options.AddPolicy("AllowAngular",
+                    policy =>
+                    {
+                        policy.WithOrigins("http://localhost:4200")
+                              .AllowAnyHeader()
+                              .AllowAnyMethod();
+                    });
+            });
 
             var app = builder.Build();
 
-            // Configure the HTTP request pipeline.
+            // Swagger
             if (app.Environment.IsDevelopment())
             {
                 app.UseSwagger();
@@ -38,8 +54,10 @@ namespace CLINICAL_MANAGEMENT
 
             app.UseHttpsRedirection();
 
-            app.UseAuthorization();
+            // ? USE CORS HERE (VERY IMPORTANT POSITION)
+            app.UseCors("AllowAngular");
 
+            app.UseAuthorization();
 
             app.MapControllers();
 

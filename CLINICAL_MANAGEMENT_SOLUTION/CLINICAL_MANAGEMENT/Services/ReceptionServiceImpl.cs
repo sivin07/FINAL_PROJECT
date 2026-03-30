@@ -22,6 +22,16 @@ namespace CLINICAL_MANAGEMENT.Service
             return await _receptionRepository.GetPatientById(id);
         }
 
+        public async Task<IEnumerable<Patient>> SearchPatients(string term)
+        {
+            return await _receptionRepository.SearchPatients(term);
+        }
+
+        public async Task<string> GenerateNextMmrNo()
+        {
+            return await _receptionRepository.GenerateNextMmrNo();
+        }
+
         public async Task<Patient> AddPatient(Patient patient)
         {
             return await _receptionRepository.AddPatient(patient);
@@ -35,6 +45,36 @@ namespace CLINICAL_MANAGEMENT.Service
         public async Task<bool> DeletePatient(int id)
         {
             return await _receptionRepository.DeletePatient(id);
+        }
+
+        public async Task<IEnumerable<DoctorSlot>> GetAvailableSlotsByDate(DateOnly date)
+        {
+            return await _receptionRepository.GetAvailableSlotsByDate(date);
+        }
+
+        public async Task<Appointment?> BookAppointment(int patientId, int slotId)
+        {
+            return await _receptionRepository.BookAppointment(patientId, slotId);
+        }
+
+        public async Task<IEnumerable<Appointment>> GetAppointmentsByPatient(int patientId)
+        {
+            return await _receptionRepository.GetAppointmentsByPatient(patientId);
+        }
+
+        public async Task<IEnumerable<object>> GetAllAppointments()
+        {
+            return await _receptionRepository.GetAllAppointments();
+        }
+
+        public async Task<IEnumerable<object>> SearchAppointments(string? term, DateOnly? date)
+        {
+            return await _receptionRepository.SearchAppointments(term, date);
+        }
+
+        public async Task<object?> GenerateConsultationBill(int appointmentId)
+        {
+            return await _receptionRepository.GenerateConsultationBill(appointmentId);
         }
     }
 }
