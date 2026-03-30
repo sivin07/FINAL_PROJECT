@@ -154,7 +154,7 @@ public partial class CmsContext : DbContext
                 .HasMaxLength(100)
                 .IsUnicode(false);
 
-            entity.HasOne(d => d.Dept).WithMany(p => p.Doctors)
+            entity.HasOne(d => d.Department).WithMany(p => p.Doctors)
                 .HasForeignKey(d => d.DeptId)
                 .HasConstraintName("FK_Doctor_Dept");
 

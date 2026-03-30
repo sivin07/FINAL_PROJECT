@@ -1,5 +1,7 @@
-﻿using System;
+﻿
+using System;
 using System.Collections.Generic;
+using System.Text.Json.Serialization;
 
 namespace CLINICAL_MANAGEMENT.Models;
 
@@ -29,6 +31,7 @@ public partial class IssuedMedicine
 
     public virtual Medicine? Medicine { get; set; }
 
+    [JsonIgnore]
     public virtual ICollection<MedicineBill> MedicineBills { get; set; } = new List<MedicineBill>();
 
     public virtual Patient? Patient { get; set; }
