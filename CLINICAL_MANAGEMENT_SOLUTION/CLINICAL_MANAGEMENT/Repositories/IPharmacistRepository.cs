@@ -31,5 +31,8 @@ namespace CLINICAL_MANAGEMENT.Repositories
 
 
         Task<List<BillDto>> GetBill(int patientId);
+
+        //login special testing 
+
     }
 }

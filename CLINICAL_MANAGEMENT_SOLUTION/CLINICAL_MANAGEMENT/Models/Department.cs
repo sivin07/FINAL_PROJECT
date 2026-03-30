@@ -1,4 +1,4 @@
-﻿using Newtonsoft.Json;
+﻿
 using System;
 using System.Collections.Generic;
 using System.Text.Json.Serialization;
@@ -12,10 +12,5 @@ public partial class Department
     public string DeptName { get; set; } = null!;
 
     [JsonIgnore]
-<<<<<<< HEAD
-
-
-=======
->>>>>>> labtech
     public virtual ICollection<Doctor> Doctors { get; set; } = new List<Doctor>();
 }

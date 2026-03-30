@@ -1,4 +1,4 @@
-﻿using Newtonsoft.Json;
+﻿
 using System;
 using System.Collections.Generic;
 using System.Text.Json.Serialization;
@@ -19,19 +19,16 @@ public partial class Doctor
 
     public decimal? ConsultationFees { get; set; }
 
-<<<<<<< HEAD
+
 
     [JsonIgnore]
     public virtual ICollection<Appointment> Appointments { get; set; } = new List<Appointment>();
 
-=======
-    [JsonIgnore]
-    public virtual ICollection<Appointment> Appointments { get; set; } = new List<Appointment>();
+
 
     public virtual Department? Dept { get; set; }
 
->>>>>>> labtech
-    [JsonIgnore]
+
     public virtual ICollection<DiagnosisDetail> DiagnosisDetails { get; set; } = new List<DiagnosisDetail>();
 
     [JsonIgnore]

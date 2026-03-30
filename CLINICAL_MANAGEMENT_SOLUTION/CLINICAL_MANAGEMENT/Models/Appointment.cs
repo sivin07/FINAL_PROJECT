@@ -1,4 +1,4 @@
-﻿using Newtonsoft.Json;
+﻿
 using System;
 using System.Collections.Generic;
 using System.Text.Json.Serialization;
@@ -29,15 +29,15 @@ public partial class Appointment
     public virtual Doctor Doctor { get; set; } = null!;
     [JsonIgnore]
 
-    [JsonIgnore]
+ 
     public virtual ICollection<IssuedMedicine> IssuedMedicines { get; set; } = new List<IssuedMedicine>();
     [JsonIgnore]
 
-    [JsonIgnore]
+
     public virtual ICollection<LabTestPrescription> LabTestPrescriptions { get; set; } = new List<LabTestPrescription>();
     [JsonIgnore]
 
-    [JsonIgnore]
+
     public virtual ICollection<MedPrescription> MedPrescriptions { get; set; } = new List<MedPrescription>();
 
     public virtual Patient Patient { get; set; } = null!;
