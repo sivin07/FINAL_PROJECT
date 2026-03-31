@@ -91,15 +91,13 @@ namespace CLINICAL_MANAGEMENT.Repositories
 
         public async Task<string> IssuePrescriptionAsync(int prescriptionId)
         {
-            var result = await _context
-                .Set<SpResultDto>()
+            var result = _context.SpResultDtos
                 .FromSqlRaw("EXEC sp_IssuePrescription @PrescriptionId = {0}", prescriptionId)
-                .AsNoTracking()
-                .FirstOrDefaultAsync();
+                .AsEnumerable()
+                .FirstOrDefault();
 
             return result?.Result;
         }
-
 
         public async Task<List<PrescriptionResponseDto>> GetPrescriptionDetails(int appointmentId)
         {
@@ -109,19 +107,22 @@ namespace CLINICAL_MANAGEMENT.Repositories
                 {
                     PrescriptionId = p.PrescriptionId,
                     MedicineName = p.Medicine.MedicineName,
+                    Dosage = p.Dosage,
                     Quantity = p.Quantity,
                     Frequency = p.Frequency,
-                    DurationDays = p.DurationDays
+                    DurationDays = p.DurationDays,
+                    Stock = p.Medicine.Quantity ?? 0,  // ← add this!
+                    Status = p.Status                   // ← add this!
                 })
                 .AsNoTracking()
                 .ToListAsync();
         }
 
 
-        public async Task<List<BillDto>> GetBill(int patientId)
+        public async Task<List<BillDto>> GetBill(int appointmentId)
         {
             return await _context.MedicineBills
-                .Where(b => b.IssuedMedicine.PatientId == patientId)
+                .Where(b => b.IssuedMedicine.AppointmentId == appointmentId)
                 .Select(b => new BillDto
                 {
                     PatientName = b.IssuedMedicine.Patient.Name,

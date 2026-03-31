@@ -24,6 +24,6 @@ namespace CLINICAL_MANAGEMENT.Services
 
         Task<List<PrescriptionResponseDto>> GetPrescriptionDetails(int appointmentId);
 
-        Task<List<BillDto>> GetBill(int patientId);
+        Task<List<BillDto>> GetBillAsync(int appointmentId);
     }
 }

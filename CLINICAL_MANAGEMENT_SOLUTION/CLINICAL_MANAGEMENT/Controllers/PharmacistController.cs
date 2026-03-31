@@ -95,10 +95,15 @@ namespace CLINICAL_MANAGEMENT.Controllers
 
             return result switch
             {
-                "SUCCESS" => Ok("Medicine Issued Successfully"),
-                "OUT_OF_STOCK" => BadRequest("Out of Stock"),
-                "ALREADY_ISSUED" => BadRequest("Already Issued"),
-                _ => StatusCode(500, "Error")
+                "SUCCESS" => Ok(new { success = true, message = "Medicine issued successfully" }),
+
+                "OUT_OF_STOCK" => BadRequest(new { success = false, message = "Out of stock" }),
+
+                "ALREADY_ISSUED" => BadRequest(new { success = false, message = "Already issued" }),
+
+                "INVALID_DATA" => BadRequest(new { success = false, message = "Invalid data" }),
+
+                _ => StatusCode(500, new { success = false, message = "Something went wrong" })
             };
         }
 
@@ -114,17 +119,20 @@ namespace CLINICAL_MANAGEMENT.Controllers
 
             return Ok(data);
         }
-
-
-        [HttpGet("bill/{patientId}")]
-        public async Task<IActionResult> GetBill(int patientId)
+        [HttpGet("bill/appointment/{appointmentId}")]
+        public async Task<IActionResult> GetBill(int appointmentId)
         {
-            var result = await _service.GetBill(patientId);
+            var bills = await _service.GetBillAsync(appointmentId);
+            if (bills == null || !bills.Any())
+                return NotFound("No bills found!");
 
-            if (result == null || !result.Any())
-                return NotFound("No bill found");
-
-            return Ok(result);
+            var response = new
+            {
+                AppointmentId = appointmentId,
+                Bills = bills,
+                TotalBill = bills.Sum(b => b.Bill)
+            };
+            return Ok(response);
         }
 
 

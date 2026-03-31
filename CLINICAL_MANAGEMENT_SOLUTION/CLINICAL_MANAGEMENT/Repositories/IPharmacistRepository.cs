@@ -30,7 +30,7 @@ namespace CLINICAL_MANAGEMENT.Repositories
         Task<List<PrescriptionResponseDto>> GetPrescriptionDetails(int appointmentId);
 
 
-        Task<List<BillDto>> GetBill(int patientId);
+        Task<List<BillDto>> GetBill(int appointmentId);
 
         //login special testing 
 

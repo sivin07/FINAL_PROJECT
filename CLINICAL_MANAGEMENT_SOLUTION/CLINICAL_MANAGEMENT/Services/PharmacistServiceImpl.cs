@@ -61,11 +61,9 @@ namespace CLINICAL_MANAGEMENT.Services
         {
             return await _repo.GetPrescriptionDetails(appointmentId);
         }
-
-
-        public async Task<List<BillDto>> GetBill(int patientId)
+        public async Task<List<BillDto>> GetBillAsync(int appointmentId)
         {
-            return await _repo.GetBill(patientId);
+            return await _repo.GetBill(appointmentId);
         }
     }
 }
