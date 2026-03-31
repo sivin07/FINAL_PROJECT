@@ -17,35 +17,49 @@ namespace CLINICAL_MANAGEMENT.Controllers
             _labService = labService;
         }
 
-        #region 1. Get Pending Lab Tests
+        #region 1. Get Pending Tests
 
         [HttpGet("pending")]
         public async Task<ActionResult<IEnumerable<LabTestPrescription>>> GetPendingTests()
         {
-            var tests = await _labService.GetPendingTests();
+            var result = await _labService.GetPendingTests();
 
-            if (tests == null || !tests.Value.Any())
-                return NotFound("No pending lab tests");
+            if (result == null || !result.Value.Any())
+                return NotFound("No pending tests found");
 
-            return Ok(tests.Value);
+            return Ok(result.Value);
         }
 
         #endregion
 
-        #region 2. Complete Lab Test (CORE API)
+        #region 2. Complete Lab Test
 
         [HttpPost("complete/{prescriptionId}")]
         public async Task<IActionResult> CompleteLabTest(int prescriptionId, LabResult labResult)
         {
-            if (!ModelState.IsValid)
-                return BadRequest(ModelState);
+            try
+            {
+                if (!ModelState.IsValid)
+                    return BadRequest(ModelState);
 
-            var result = await _labService.CompleteLabTest(prescriptionId, labResult);
+                var result = await _labService.CompleteLabTest(prescriptionId, labResult);
 
-            if (!result)
-                return BadRequest("Lab test could not be completed");
+                if (!result)
+                    return BadRequest("Lab test could not be completed");
 
-            return Ok("Lab test completed successfully");
+                return Ok(new
+                {
+                    message = "Lab test completed successfully"
+                });
+            }
+            catch (ArgumentException ex)
+            {
+                return BadRequest(ex.Message);
+            }
+            catch (Exception)
+            {
+                return StatusCode(500, "An error occurred while processing the request");
+            }
         }
 
         #endregion
@@ -70,12 +84,19 @@ namespace CLINICAL_MANAGEMENT.Controllers
         [HttpGet("reports/{patientId}")]
         public async Task<ActionResult<IEnumerable<LabResult>>> GetReportsByPatient(int patientId)
         {
-            var reports = await _labService.GetReportsByPatient(patientId);
+            try
+            {
+                var reports = await _labService.GetReportsByPatient(patientId);
 
-            if (reports == null || !reports.Value.Any())
-                return NotFound("No reports found for this patient");
+                if (reports == null || !reports.Value.Any())
+                    return NotFound("No reports found for this patient");
 
-            return Ok(reports.Value);
+                return Ok(reports.Value);
+            }
+            catch (ArgumentException ex)
+            {
+                return BadRequest(ex.Message);
+            }
         }
 
         #endregion

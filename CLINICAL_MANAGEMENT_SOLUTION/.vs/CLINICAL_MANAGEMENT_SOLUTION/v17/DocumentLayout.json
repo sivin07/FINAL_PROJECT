@@ -3,8 +3,16 @@
   "WorkspaceRootPath": "C:\\Users\\JIJITHA V\\source\\repos\\Camp6_Project\\FINAL_PROJECT\\CLINICAL_MANAGEMENT_SOLUTION\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{494C15D4-98A1-41C6-8D58-2AAC3FF94CAD}|CLINICAL_MANAGEMENT\\CLINICAL_MANAGEMENT.csproj|c:\\users\\jijitha v\\source\\repos\\camp6_project\\final_project\\clinical_management_solution\\clinical_management\\repositories\\ilabtechnicianrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{494C15D4-98A1-41C6-8D58-2AAC3FF94CAD}|CLINICAL_MANAGEMENT\\CLINICAL_MANAGEMENT.csproj|solutionrelative:clinical_management\\repositories\\ilabtechnicianrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{494C15D4-98A1-41C6-8D58-2AAC3FF94CAD}|CLINICAL_MANAGEMENT\\CLINICAL_MANAGEMENT.csproj|c:\\users\\jijitha v\\source\\repos\\camp6_project\\final_project\\clinical_management_solution\\clinical_management\\repositories\\labtechrepositoryimpl.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{494C15D4-98A1-41C6-8D58-2AAC3FF94CAD}|CLINICAL_MANAGEMENT\\CLINICAL_MANAGEMENT.csproj|solutionrelative:clinical_management\\repositories\\labtechrepositoryimpl.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{494C15D4-98A1-41C6-8D58-2AAC3FF94CAD}|CLINICAL_MANAGEMENT\\CLINICAL_MANAGEMENT.csproj|c:\\users\\jijitha v\\source\\repos\\camp6_project\\final_project\\clinical_management_solution\\clinical_management\\models\\labtest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{494C15D4-98A1-41C6-8D58-2AAC3FF94CAD}|CLINICAL_MANAGEMENT\\CLINICAL_MANAGEMENT.csproj|solutionrelative:clinical_management\\models\\labtest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{494C15D4-98A1-41C6-8D58-2AAC3FF94CAD}|CLINICAL_MANAGEMENT\\CLINICAL_MANAGEMENT.csproj|c:\\users\\jijitha v\\source\\repos\\camp6_project\\final_project\\clinical_management_solution\\clinical_management\\models\\labresult.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -13,6 +21,22 @@
     {
       "AbsoluteMoniker": "D:0:0:{494C15D4-98A1-41C6-8D58-2AAC3FF94CAD}|CLINICAL_MANAGEMENT\\CLINICAL_MANAGEMENT.csproj|c:\\users\\jijitha v\\source\\repos\\camp6_project\\final_project\\clinical_management_solution\\clinical_management\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{494C15D4-98A1-41C6-8D58-2AAC3FF94CAD}|CLINICAL_MANAGEMENT\\CLINICAL_MANAGEMENT.csproj|solutionrelative:clinical_management\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{494C15D4-98A1-41C6-8D58-2AAC3FF94CAD}|CLINICAL_MANAGEMENT\\CLINICAL_MANAGEMENT.csproj|c:\\users\\jijitha v\\source\\repos\\camp6_project\\final_project\\clinical_management_solution\\clinical_management\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{494C15D4-98A1-41C6-8D58-2AAC3FF94CAD}|CLINICAL_MANAGEMENT\\CLINICAL_MANAGEMENT.csproj|solutionrelative:clinical_management\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{494C15D4-98A1-41C6-8D58-2AAC3FF94CAD}|CLINICAL_MANAGEMENT\\CLINICAL_MANAGEMENT.csproj|c:\\users\\jijitha v\\source\\repos\\camp6_project\\final_project\\clinical_management_solution\\clinical_management\\controllers\\labtechniciancontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{494C15D4-98A1-41C6-8D58-2AAC3FF94CAD}|CLINICAL_MANAGEMENT\\CLINICAL_MANAGEMENT.csproj|solutionrelative:clinical_management\\controllers\\labtechniciancontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{494C15D4-98A1-41C6-8D58-2AAC3FF94CAD}|CLINICAL_MANAGEMENT\\CLINICAL_MANAGEMENT.csproj|c:\\users\\jijitha v\\source\\repos\\camp6_project\\final_project\\clinical_management_solution\\clinical_management\\services\\labtechserviceimpl.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{494C15D4-98A1-41C6-8D58-2AAC3FF94CAD}|CLINICAL_MANAGEMENT\\CLINICAL_MANAGEMENT.csproj|solutionrelative:clinical_management\\services\\labtechserviceimpl.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{494C15D4-98A1-41C6-8D58-2AAC3FF94CAD}|CLINICAL_MANAGEMENT\\CLINICAL_MANAGEMENT.csproj|c:\\users\\jijitha v\\source\\repos\\camp6_project\\final_project\\clinical_management_solution\\clinical_management\\services\\ilabtechnicianservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{494C15D4-98A1-41C6-8D58-2AAC3FF94CAD}|CLINICAL_MANAGEMENT\\CLINICAL_MANAGEMENT.csproj|solutionrelative:clinical_management\\services\\ilabtechnicianservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{494C15D4-98A1-41C6-8D58-2AAC3FF94CAD}|CLINICAL_MANAGEMENT\\CLINICAL_MANAGEMENT.csproj|c:\\users\\jijitha v\\source\\repos\\camp6_project\\final_project\\clinical_management_solution\\clinical_management\\models\\appointment.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -41,10 +65,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{494C15D4-98A1-41C6-8D58-2AAC3FF94CAD}|CLINICAL_MANAGEMENT\\CLINICAL_MANAGEMENT.csproj|c:\\users\\jijitha v\\source\\repos\\camp6_project\\final_project\\clinical_management_solution\\clinical_management\\models\\issuedmedicine.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{494C15D4-98A1-41C6-8D58-2AAC3FF94CAD}|CLINICAL_MANAGEMENT\\CLINICAL_MANAGEMENT.csproj|solutionrelative:clinical_management\\models\\issuedmedicine.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{494C15D4-98A1-41C6-8D58-2AAC3FF94CAD}|CLINICAL_MANAGEMENT\\CLINICAL_MANAGEMENT.csproj|c:\\users\\jijitha v\\source\\repos\\camp6_project\\final_project\\clinical_management_solution\\clinical_management\\models\\labtest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{494C15D4-98A1-41C6-8D58-2AAC3FF94CAD}|CLINICAL_MANAGEMENT\\CLINICAL_MANAGEMENT.csproj|solutionrelative:clinical_management\\models\\labtest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{494C15D4-98A1-41C6-8D58-2AAC3FF94CAD}|CLINICAL_MANAGEMENT\\CLINICAL_MANAGEMENT.csproj|c:\\users\\jijitha v\\source\\repos\\camp6_project\\final_project\\clinical_management_solution\\clinical_management\\models\\labtestprescription.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -87,22 +107,6 @@
       "RelativeMoniker": "D:0:0:{494C15D4-98A1-41C6-8D58-2AAC3FF94CAD}|CLINICAL_MANAGEMENT\\CLINICAL_MANAGEMENT.csproj|solutionrelative:clinical_management\\models\\staff.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{494C15D4-98A1-41C6-8D58-2AAC3FF94CAD}|CLINICAL_MANAGEMENT\\CLINICAL_MANAGEMENT.csproj|c:\\users\\jijitha v\\source\\repos\\camp6_project\\final_project\\clinical_management_solution\\clinical_management\\controllers\\labtechniciancontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{494C15D4-98A1-41C6-8D58-2AAC3FF94CAD}|CLINICAL_MANAGEMENT\\CLINICAL_MANAGEMENT.csproj|solutionrelative:clinical_management\\controllers\\labtechniciancontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{494C15D4-98A1-41C6-8D58-2AAC3FF94CAD}|CLINICAL_MANAGEMENT\\CLINICAL_MANAGEMENT.csproj|c:\\users\\jijitha v\\source\\repos\\camp6_project\\final_project\\clinical_management_solution\\clinical_management\\services\\labtechserviceimpl.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{494C15D4-98A1-41C6-8D58-2AAC3FF94CAD}|CLINICAL_MANAGEMENT\\CLINICAL_MANAGEMENT.csproj|solutionrelative:clinical_management\\services\\labtechserviceimpl.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{494C15D4-98A1-41C6-8D58-2AAC3FF94CAD}|CLINICAL_MANAGEMENT\\CLINICAL_MANAGEMENT.csproj|c:\\users\\jijitha v\\source\\repos\\camp6_project\\final_project\\clinical_management_solution\\clinical_management\\services\\ilabtechnicianservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{494C15D4-98A1-41C6-8D58-2AAC3FF94CAD}|CLINICAL_MANAGEMENT\\CLINICAL_MANAGEMENT.csproj|solutionrelative:clinical_management\\services\\ilabtechnicianservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{494C15D4-98A1-41C6-8D58-2AAC3FF94CAD}|CLINICAL_MANAGEMENT\\CLINICAL_MANAGEMENT.csproj|c:\\users\\jijitha v\\source\\repos\\camp6_project\\final_project\\clinical_management_solution\\clinical_management\\repositories\\ilabtechnicianrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{494C15D4-98A1-41C6-8D58-2AAC3FF94CAD}|CLINICAL_MANAGEMENT\\CLINICAL_MANAGEMENT.csproj|solutionrelative:clinical_management\\repositories\\ilabtechnicianrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{494C15D4-98A1-41C6-8D58-2AAC3FF94CAD}|CLINICAL_MANAGEMENT\\CLINICAL_MANAGEMENT.csproj|c:\\users\\jijitha v\\source\\repos\\camp6_project\\final_project\\clinical_management_solution\\clinical_management\\models\\cmscontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{494C15D4-98A1-41C6-8D58-2AAC3FF94CAD}|CLINICAL_MANAGEMENT\\CLINICAL_MANAGEMENT.csproj|solutionrelative:clinical_management\\models\\cmscontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
@@ -114,54 +118,128 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 7,
+          "SelectedChildIndex": 6,
           "Children": [
             {
               "$type": "Bookmark",
-              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
+              "Name": "ST:0:0:{d78612c7-9962-4b83-95d9-268046dad23a}"
             },
             {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "Appointment.cs",
-              "DocumentMoniker": "C:\\Users\\JIJITHA V\\source\\repos\\Camp6_Project\\FINAL_PROJECT\\CLINICAL_MANAGEMENT_SOLUTION\\CLINICAL_MANAGEMENT\\Models\\Appointment.cs",
-              "RelativeDocumentMoniker": "CLINICAL_MANAGEMENT\\Models\\Appointment.cs",
-              "ToolTip": "C:\\Users\\JIJITHA V\\source\\repos\\Camp6_Project\\FINAL_PROJECT\\CLINICAL_MANAGEMENT_SOLUTION\\CLINICAL_MANAGEMENT\\Models\\Appointment.cs",
-              "RelativeToolTip": "CLINICAL_MANAGEMENT\\Models\\Appointment.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAACMAAAAQAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-25T09:11:07.744Z",
-              "EditorCaption": ""
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{34e76e81-ee4a-11d0-ae2e-00a0c90fffc3}"
             },
             {
               "$type": "Document",
               "DocumentIndex": 4,
-              "Title": "Category.cs",
-              "DocumentMoniker": "C:\\Users\\JIJITHA V\\source\\repos\\Camp6_Project\\FINAL_PROJECT\\CLINICAL_MANAGEMENT_SOLUTION\\CLINICAL_MANAGEMENT\\Models\\Category.cs",
-              "RelativeDocumentMoniker": "CLINICAL_MANAGEMENT\\Models\\Category.cs",
-              "ToolTip": "C:\\Users\\JIJITHA V\\source\\repos\\Camp6_Project\\FINAL_PROJECT\\CLINICAL_MANAGEMENT_SOLUTION\\CLINICAL_MANAGEMENT\\Models\\Category.cs",
-              "RelativeToolTip": "CLINICAL_MANAGEMENT\\Models\\Category.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAAAAAAAAAAAA==",
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\JIJITHA V\\source\\repos\\Camp6_Project\\FINAL_PROJECT\\CLINICAL_MANAGEMENT_SOLUTION\\CLINICAL_MANAGEMENT\\Program.cs",
+              "RelativeDocumentMoniker": "CLINICAL_MANAGEMENT\\Program.cs",
+              "ToolTip": "C:\\Users\\JIJITHA V\\source\\repos\\Camp6_Project\\FINAL_PROJECT\\CLINICAL_MANAGEMENT_SOLUTION\\CLINICAL_MANAGEMENT\\Program.cs",
+              "RelativeToolTip": "CLINICAL_MANAGEMENT\\Program.cs",
+              "ViewState": "AgIAAAcAAAAAAAAAAAAuwBUAAABjAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-25T09:10:55.086Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-03-25T04:15:13.81Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "Department.cs",
-              "DocumentMoniker": "C:\\Users\\JIJITHA V\\source\\repos\\Camp6_Project\\FINAL_PROJECT\\CLINICAL_MANAGEMENT_SOLUTION\\CLINICAL_MANAGEMENT\\Models\\Department.cs",
-              "RelativeDocumentMoniker": "CLINICAL_MANAGEMENT\\Models\\Department.cs",
-              "ToolTip": "C:\\Users\\JIJITHA V\\source\\repos\\Camp6_Project\\FINAL_PROJECT\\CLINICAL_MANAGEMENT_SOLUTION\\CLINICAL_MANAGEMENT\\Models\\Department.cs",
-              "RelativeToolTip": "CLINICAL_MANAGEMENT\\Models\\Department.cs",
-              "ViewState": "AgIAAAQAAAAAAAAAAAAAAAwAAAAPAAAAAAAAAA==",
+              "DocumentIndex": 3,
+              "Title": "LabResult.cs",
+              "DocumentMoniker": "C:\\Users\\JIJITHA V\\source\\repos\\Camp6_Project\\FINAL_PROJECT\\CLINICAL_MANAGEMENT_SOLUTION\\CLINICAL_MANAGEMENT\\Models\\LabResult.cs",
+              "RelativeDocumentMoniker": "CLINICAL_MANAGEMENT\\Models\\LabResult.cs",
+              "ToolTip": "C:\\Users\\JIJITHA V\\source\\repos\\Camp6_Project\\FINAL_PROJECT\\CLINICAL_MANAGEMENT_SOLUTION\\CLINICAL_MANAGEMENT\\Models\\LabResult.cs",
+              "RelativeToolTip": "CLINICAL_MANAGEMENT\\Models\\LabResult.cs",
+              "ViewState": "AgIAAAgAAAAAAAAAAAAxwBgAAAAQAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-25T09:10:42.542Z",
+              "WhenOpened": "2026-03-25T09:00:04.074Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "LabTest.cs",
+              "DocumentMoniker": "C:\\Users\\JIJITHA V\\source\\repos\\Camp6_Project\\FINAL_PROJECT\\CLINICAL_MANAGEMENT_SOLUTION\\CLINICAL_MANAGEMENT\\Models\\LabTest.cs",
+              "RelativeDocumentMoniker": "CLINICAL_MANAGEMENT\\Models\\LabTest.cs",
+              "ToolTip": "C:\\Users\\JIJITHA V\\source\\repos\\Camp6_Project\\FINAL_PROJECT\\CLINICAL_MANAGEMENT_SOLUTION\\CLINICAL_MANAGEMENT\\Models\\LabTest.cs",
+              "RelativeToolTip": "CLINICAL_MANAGEMENT\\Models\\LabTest.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABUAAAAQAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-25T09:00:36.088Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "LabTechRepositoryImpl.cs",
+              "DocumentMoniker": "C:\\Users\\JIJITHA V\\source\\repos\\Camp6_Project\\FINAL_PROJECT\\CLINICAL_MANAGEMENT_SOLUTION\\CLINICAL_MANAGEMENT\\Repositories\\LabTechRepositoryImpl.cs",
+              "RelativeDocumentMoniker": "CLINICAL_MANAGEMENT\\Repositories\\LabTechRepositoryImpl.cs",
+              "ToolTip": "C:\\Users\\JIJITHA V\\source\\repos\\Camp6_Project\\FINAL_PROJECT\\CLINICAL_MANAGEMENT_SOLUTION\\CLINICAL_MANAGEMENT\\Repositories\\LabTechRepositoryImpl.cs",
+              "RelativeToolTip": "CLINICAL_MANAGEMENT\\Repositories\\LabTechRepositoryImpl.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAAAQAAAAqAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-25T05:06:17.277Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "ILabTechnicianRepository.cs",
+              "DocumentMoniker": "C:\\Users\\JIJITHA V\\source\\repos\\Camp6_Project\\FINAL_PROJECT\\CLINICAL_MANAGEMENT_SOLUTION\\CLINICAL_MANAGEMENT\\Repositories\\ILabTechnicianRepository.cs",
+              "RelativeDocumentMoniker": "CLINICAL_MANAGEMENT\\Repositories\\ILabTechnicianRepository.cs",
+              "ToolTip": "C:\\Users\\JIJITHA V\\source\\repos\\Camp6_Project\\FINAL_PROJECT\\CLINICAL_MANAGEMENT_SOLUTION\\CLINICAL_MANAGEMENT\\Repositories\\ILabTechnicianRepository.cs",
+              "RelativeToolTip": "CLINICAL_MANAGEMENT\\Repositories\\ILabTechnicianRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-25T05:04:28.229Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 6,
+              "Title": "LabTechnicianController.cs",
+              "DocumentMoniker": "C:\\Users\\JIJITHA V\\source\\repos\\Camp6_Project\\FINAL_PROJECT\\CLINICAL_MANAGEMENT_SOLUTION\\CLINICAL_MANAGEMENT\\Controllers\\LabTechnicianController.cs",
+              "RelativeDocumentMoniker": "CLINICAL_MANAGEMENT\\Controllers\\LabTechnicianController.cs",
+              "ToolTip": "C:\\Users\\JIJITHA V\\source\\repos\\Camp6_Project\\FINAL_PROJECT\\CLINICAL_MANAGEMENT_SOLUTION\\CLINICAL_MANAGEMENT\\Controllers\\LabTechnicianController.cs",
+              "RelativeToolTip": "CLINICAL_MANAGEMENT\\Controllers\\LabTechnicianController.cs",
+              "ViewState": "AgIAAA4AAAAAAAAAAAAAwGgAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-25T05:29:04.569Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "LabTechServiceImpl.cs",
+              "DocumentMoniker": "C:\\Users\\JIJITHA V\\source\\repos\\Camp6_Project\\FINAL_PROJECT\\CLINICAL_MANAGEMENT_SOLUTION\\CLINICAL_MANAGEMENT\\Services\\LabTechServiceImpl.cs",
+              "RelativeDocumentMoniker": "CLINICAL_MANAGEMENT\\Services\\LabTechServiceImpl.cs",
+              "ToolTip": "C:\\Users\\JIJITHA V\\source\\repos\\Camp6_Project\\FINAL_PROJECT\\CLINICAL_MANAGEMENT_SOLUTION\\CLINICAL_MANAGEMENT\\Services\\LabTechServiceImpl.cs",
+              "RelativeToolTip": "CLINICAL_MANAGEMENT\\Services\\LabTechServiceImpl.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAEMAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-25T05:25:26.516Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "C:\\Users\\JIJITHA V\\source\\repos\\Camp6_Project\\FINAL_PROJECT\\CLINICAL_MANAGEMENT_SOLUTION\\CLINICAL_MANAGEMENT\\appsettings.json",
+              "RelativeDocumentMoniker": "CLINICAL_MANAGEMENT\\appsettings.json",
+              "ToolTip": "C:\\Users\\JIJITHA V\\source\\repos\\Camp6_Project\\FINAL_PROJECT\\CLINICAL_MANAGEMENT_SOLUTION\\CLINICAL_MANAGEMENT\\appsettings.json",
+              "RelativeToolTip": "CLINICAL_MANAGEMENT\\appsettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2026-03-28T14:42:24.019Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "ILabTechnicianService.cs",
+              "DocumentMoniker": "C:\\Users\\JIJITHA V\\source\\repos\\Camp6_Project\\FINAL_PROJECT\\CLINICAL_MANAGEMENT_SOLUTION\\CLINICAL_MANAGEMENT\\Services\\ILabTechnicianService.cs",
+              "RelativeDocumentMoniker": "CLINICAL_MANAGEMENT\\Services\\ILabTechnicianService.cs",
+              "ToolTip": "C:\\Users\\JIJITHA V\\source\\repos\\Camp6_Project\\FINAL_PROJECT\\CLINICAL_MANAGEMENT_SOLUTION\\CLINICAL_MANAGEMENT\\Services\\ILabTechnicianService.cs",
+              "RelativeToolTip": "CLINICAL_MANAGEMENT\\Services\\ILabTechnicianService.cs",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAYwBEAAABWAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-25T05:27:05.389Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
               "Title": "DiagnosisDetail.cs",
               "DocumentMoniker": "C:\\Users\\JIJITHA V\\source\\repos\\Camp6_Project\\FINAL_PROJECT\\CLINICAL_MANAGEMENT_SOLUTION\\CLINICAL_MANAGEMENT\\Models\\DiagnosisDetail.cs",
               "RelativeDocumentMoniker": "CLINICAL_MANAGEMENT\\Models\\DiagnosisDetail.cs",
@@ -169,51 +247,47 @@
               "RelativeToolTip": "CLINICAL_MANAGEMENT\\Models\\DiagnosisDetail.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-25T09:10:35.672Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-03-25T09:10:35.672Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "Program.cs",
-              "DocumentMoniker": "C:\\Users\\JIJITHA V\\source\\repos\\Camp6_Project\\FINAL_PROJECT\\CLINICAL_MANAGEMENT_SOLUTION\\CLINICAL_MANAGEMENT\\Program.cs",
-              "RelativeDocumentMoniker": "CLINICAL_MANAGEMENT\\Program.cs",
-              "ToolTip": "C:\\Users\\JIJITHA V\\source\\repos\\Camp6_Project\\FINAL_PROJECT\\CLINICAL_MANAGEMENT_SOLUTION\\CLINICAL_MANAGEMENT\\Program.cs",
-              "RelativeToolTip": "CLINICAL_MANAGEMENT\\Program.cs",
-              "ViewState": "AgIAAAgAAAAAAAAAAAAxwBYAAAAtAAAAAAAAAA==",
+              "DocumentIndex": 11,
+              "Title": "Department.cs",
+              "DocumentMoniker": "C:\\Users\\JIJITHA V\\source\\repos\\Camp6_Project\\FINAL_PROJECT\\CLINICAL_MANAGEMENT_SOLUTION\\CLINICAL_MANAGEMENT\\Models\\Department.cs",
+              "RelativeDocumentMoniker": "CLINICAL_MANAGEMENT\\Models\\Department.cs",
+              "ToolTip": "C:\\Users\\JIJITHA V\\source\\repos\\Camp6_Project\\FINAL_PROJECT\\CLINICAL_MANAGEMENT_SOLUTION\\CLINICAL_MANAGEMENT\\Models\\Department.cs",
+              "RelativeToolTip": "CLINICAL_MANAGEMENT\\Models\\Department.cs",
+              "ViewState": "AgIAAAQAAAAAAAAAAAAAAAwAAAAPAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-25T04:15:13.81Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-03-25T09:10:42.542Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "LabResult.cs",
-              "DocumentMoniker": "C:\\Users\\JIJITHA V\\source\\repos\\Camp6_Project\\FINAL_PROJECT\\CLINICAL_MANAGEMENT_SOLUTION\\CLINICAL_MANAGEMENT\\Models\\LabResult.cs",
-              "RelativeDocumentMoniker": "CLINICAL_MANAGEMENT\\Models\\LabResult.cs",
-              "ToolTip": "C:\\Users\\JIJITHA V\\source\\repos\\Camp6_Project\\FINAL_PROJECT\\CLINICAL_MANAGEMENT_SOLUTION\\CLINICAL_MANAGEMENT\\Models\\LabResult.cs",
-              "RelativeToolTip": "CLINICAL_MANAGEMENT\\Models\\LabResult.cs",
-              "ViewState": "AgIAABQAAAAAAAAAAAAswBgAAAAQAAAAAAAAAA==",
+              "DocumentIndex": 10,
+              "Title": "Category.cs",
+              "DocumentMoniker": "C:\\Users\\JIJITHA V\\source\\repos\\Camp6_Project\\FINAL_PROJECT\\CLINICAL_MANAGEMENT_SOLUTION\\CLINICAL_MANAGEMENT\\Models\\Category.cs",
+              "RelativeDocumentMoniker": "CLINICAL_MANAGEMENT\\Models\\Category.cs",
+              "ToolTip": "C:\\Users\\JIJITHA V\\source\\repos\\Camp6_Project\\FINAL_PROJECT\\CLINICAL_MANAGEMENT_SOLUTION\\CLINICAL_MANAGEMENT\\Models\\Category.cs",
+              "RelativeToolTip": "CLINICAL_MANAGEMENT\\Models\\Category.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-25T09:00:04.074Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-03-25T09:10:55.086Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "LabTechRepositoryImpl.cs",
-              "DocumentMoniker": "C:\\Users\\JIJITHA V\\source\\repos\\Camp6_Project\\FINAL_PROJECT\\CLINICAL_MANAGEMENT_SOLUTION\\CLINICAL_MANAGEMENT\\Repositories\\LabTechRepositoryImpl.cs",
-              "RelativeDocumentMoniker": "CLINICAL_MANAGEMENT\\Repositories\\LabTechRepositoryImpl.cs",
-              "ToolTip": "C:\\Users\\JIJITHA V\\source\\repos\\Camp6_Project\\FINAL_PROJECT\\CLINICAL_MANAGEMENT_SOLUTION\\CLINICAL_MANAGEMENT\\Repositories\\LabTechRepositoryImpl.cs",
-              "RelativeToolTip": "CLINICAL_MANAGEMENT\\Repositories\\LabTechRepositoryImpl.cs",
-              "ViewState": "AgIAAAYAAAAAAAAAAAAAABIAAAAJAAAAAAAAAA==",
+              "DocumentIndex": 9,
+              "Title": "Appointment.cs",
+              "DocumentMoniker": "C:\\Users\\JIJITHA V\\source\\repos\\Camp6_Project\\FINAL_PROJECT\\CLINICAL_MANAGEMENT_SOLUTION\\CLINICAL_MANAGEMENT\\Models\\Appointment.cs",
+              "RelativeDocumentMoniker": "CLINICAL_MANAGEMENT\\Models\\Appointment.cs",
+              "ToolTip": "C:\\Users\\JIJITHA V\\source\\repos\\Camp6_Project\\FINAL_PROJECT\\CLINICAL_MANAGEMENT_SOLUTION\\CLINICAL_MANAGEMENT\\Models\\Appointment.cs",
+              "RelativeToolTip": "CLINICAL_MANAGEMENT\\Models\\Appointment.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACMAAAAQAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-25T05:06:17.277Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-03-25T09:11:07.744Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 13,
               "Title": "Doctor.cs",
               "DocumentMoniker": "C:\\Users\\JIJITHA V\\source\\repos\\Camp6_Project\\FINAL_PROJECT\\CLINICAL_MANAGEMENT_SOLUTION\\CLINICAL_MANAGEMENT\\Models\\Doctor.cs",
               "RelativeDocumentMoniker": "CLINICAL_MANAGEMENT\\Models\\Doctor.cs",
@@ -221,12 +295,11 @@
               "RelativeToolTip": "CLINICAL_MANAGEMENT\\Models\\Doctor.cs",
               "ViewState": "AgIAAAgAAAAAAAAAAAAzwCgAAAAQAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-25T09:09:21.97Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-03-25T09:09:21.97Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 14,
               "Title": "DoctorSlot.cs",
               "DocumentMoniker": "C:\\Users\\JIJITHA V\\source\\repos\\Camp6_Project\\FINAL_PROJECT\\CLINICAL_MANAGEMENT_SOLUTION\\CLINICAL_MANAGEMENT\\Models\\DoctorSlot.cs",
               "RelativeDocumentMoniker": "CLINICAL_MANAGEMENT\\Models\\DoctorSlot.cs",
@@ -234,12 +307,11 @@
               "RelativeToolTip": "CLINICAL_MANAGEMENT\\Models\\DoctorSlot.cs",
               "ViewState": "AgIAABQAAAAAAAAAAAA/wBYAAAAPAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-25T09:09:09.659Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-03-25T09:09:09.659Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 15,
               "Title": "IssuedMedicine.cs",
               "DocumentMoniker": "C:\\Users\\JIJITHA V\\source\\repos\\Camp6_Project\\FINAL_PROJECT\\CLINICAL_MANAGEMENT_SOLUTION\\CLINICAL_MANAGEMENT\\Models\\IssuedMedicine.cs",
               "RelativeDocumentMoniker": "CLINICAL_MANAGEMENT\\Models\\IssuedMedicine.cs",
@@ -247,12 +319,11 @@
               "RelativeToolTip": "CLINICAL_MANAGEMENT\\Models\\IssuedMedicine.cs",
               "ViewState": "AgIAABkAAAAAAAAAAAAIwCAAAAAPAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-25T09:08:50.739Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-03-25T09:08:50.739Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 15,
+              "DocumentIndex": 20,
               "Title": "MedPrescription.cs",
               "DocumentMoniker": "C:\\Users\\JIJITHA V\\source\\repos\\Camp6_Project\\FINAL_PROJECT\\CLINICAL_MANAGEMENT_SOLUTION\\CLINICAL_MANAGEMENT\\Models\\MedPrescription.cs",
               "RelativeDocumentMoniker": "CLINICAL_MANAGEMENT\\Models\\MedPrescription.cs",
@@ -260,12 +331,11 @@
               "RelativeToolTip": "CLINICAL_MANAGEMENT\\Models\\MedPrescription.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAACMAAAAPAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-25T08:57:10.095Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-03-25T08:57:10.095Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 14,
+              "DocumentIndex": 19,
               "Title": "MedicineBill.cs",
               "DocumentMoniker": "C:\\Users\\JIJITHA V\\source\\repos\\Camp6_Project\\FINAL_PROJECT\\CLINICAL_MANAGEMENT_SOLUTION\\CLINICAL_MANAGEMENT\\Models\\MedicineBill.cs",
               "RelativeDocumentMoniker": "CLINICAL_MANAGEMENT\\Models\\MedicineBill.cs",
@@ -273,12 +343,11 @@
               "RelativeToolTip": "CLINICAL_MANAGEMENT\\Models\\MedicineBill.cs",
               "ViewState": "AgIAAAcAAAAAAAAAAAAzwAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-25T08:57:31.519Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-03-25T08:57:31.519Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 13,
+              "DocumentIndex": 18,
               "Title": "Medicine.cs",
               "DocumentMoniker": "C:\\Users\\JIJITHA V\\source\\repos\\Camp6_Project\\FINAL_PROJECT\\CLINICAL_MANAGEMENT_SOLUTION\\CLINICAL_MANAGEMENT\\Models\\Medicine.cs",
               "RelativeDocumentMoniker": "CLINICAL_MANAGEMENT\\Models\\Medicine.cs",
@@ -286,12 +355,11 @@
               "RelativeToolTip": "CLINICAL_MANAGEMENT\\Models\\Medicine.cs",
               "ViewState": "AgIAABQAAAAAAAAAAAA/wBsAAAAQAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-25T08:59:59.868Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-03-25T08:59:59.868Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 17,
               "Title": "LabTestResultBill.cs",
               "DocumentMoniker": "C:\\Users\\JIJITHA V\\source\\repos\\Camp6_Project\\FINAL_PROJECT\\CLINICAL_MANAGEMENT_SOLUTION\\CLINICAL_MANAGEMENT\\Models\\LabTestResultBill.cs",
               "RelativeDocumentMoniker": "CLINICAL_MANAGEMENT\\Models\\LabTestResultBill.cs",
@@ -299,12 +367,11 @@
               "RelativeToolTip": "CLINICAL_MANAGEMENT\\Models\\LabTestResultBill.cs",
               "ViewState": "AgIAAAsAAAAAAAAAAAA3wAIAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-25T09:01:12.766Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-03-25T09:01:12.766Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 16,
               "Title": "LabTestPrescription.cs",
               "DocumentMoniker": "C:\\Users\\JIJITHA V\\source\\repos\\Camp6_Project\\FINAL_PROJECT\\CLINICAL_MANAGEMENT_SOLUTION\\CLINICAL_MANAGEMENT\\Models\\LabTestPrescription.cs",
               "RelativeDocumentMoniker": "CLINICAL_MANAGEMENT\\Models\\LabTestPrescription.cs",
@@ -312,25 +379,11 @@
               "RelativeToolTip": "CLINICAL_MANAGEMENT\\Models\\LabTestPrescription.cs",
               "ViewState": "AgIAABwAAAAAAAAAAAAcwAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-25T09:00:56.25Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-03-25T09:00:56.25Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
-              "Title": "LabTest.cs",
-              "DocumentMoniker": "C:\\Users\\JIJITHA V\\source\\repos\\Camp6_Project\\FINAL_PROJECT\\CLINICAL_MANAGEMENT_SOLUTION\\CLINICAL_MANAGEMENT\\Models\\LabTest.cs",
-              "RelativeDocumentMoniker": "CLINICAL_MANAGEMENT\\Models\\LabTest.cs",
-              "ToolTip": "C:\\Users\\JIJITHA V\\source\\repos\\Camp6_Project\\FINAL_PROJECT\\CLINICAL_MANAGEMENT_SOLUTION\\CLINICAL_MANAGEMENT\\Models\\LabTest.cs",
-              "RelativeToolTip": "CLINICAL_MANAGEMENT\\Models\\LabTest.cs",
-              "ViewState": "AgIAAA4AAAAAAAAAAAAgwBgAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-25T09:00:36.088Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 16,
+              "DocumentIndex": 21,
               "Title": "Patient.cs",
               "DocumentMoniker": "C:\\Users\\JIJITHA V\\source\\repos\\Camp6_Project\\FINAL_PROJECT\\CLINICAL_MANAGEMENT_SOLUTION\\CLINICAL_MANAGEMENT\\Models\\Patient.cs",
               "RelativeDocumentMoniker": "CLINICAL_MANAGEMENT\\Models\\Patient.cs",
@@ -338,12 +391,11 @@
               "RelativeToolTip": "CLINICAL_MANAGEMENT\\Models\\Patient.cs",
               "ViewState": "AgIAABMAAAAAAAAAAAAowC8AAAAQAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-25T08:53:57.125Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-03-25T08:53:57.125Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 17,
+              "DocumentIndex": 22,
               "Title": "Qualification.cs",
               "DocumentMoniker": "C:\\Users\\JIJITHA V\\source\\repos\\Camp6_Project\\FINAL_PROJECT\\CLINICAL_MANAGEMENT_SOLUTION\\CLINICAL_MANAGEMENT\\Models\\Qualification.cs",
               "RelativeDocumentMoniker": "CLINICAL_MANAGEMENT\\Models\\Qualification.cs",
@@ -351,12 +403,11 @@
               "RelativeToolTip": "CLINICAL_MANAGEMENT\\Models\\Qualification.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-25T08:53:51.848Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-03-25T08:53:51.848Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 18,
+              "DocumentIndex": 23,
               "Title": "Role.cs",
               "DocumentMoniker": "C:\\Users\\JIJITHA V\\source\\repos\\Camp6_Project\\FINAL_PROJECT\\CLINICAL_MANAGEMENT_SOLUTION\\CLINICAL_MANAGEMENT\\Models\\Role.cs",
               "RelativeDocumentMoniker": "CLINICAL_MANAGEMENT\\Models\\Role.cs",
@@ -364,12 +415,11 @@
               "RelativeToolTip": "CLINICAL_MANAGEMENT\\Models\\Role.cs",
               "ViewState": "AgIAAAcAAAAAAAAAAAAAAA0AAAAPAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-25T08:53:29.393Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-03-25T08:53:29.393Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 19,
+              "DocumentIndex": 24,
               "Title": "Specialization.cs",
               "DocumentMoniker": "C:\\Users\\JIJITHA V\\source\\repos\\Camp6_Project\\FINAL_PROJECT\\CLINICAL_MANAGEMENT_SOLUTION\\CLINICAL_MANAGEMENT\\Models\\Specialization.cs",
               "RelativeDocumentMoniker": "CLINICAL_MANAGEMENT\\Models\\Specialization.cs",
@@ -377,12 +427,11 @@
               "RelativeToolTip": "CLINICAL_MANAGEMENT\\Models\\Specialization.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAPAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-25T08:52:57.912Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-03-25T08:52:57.912Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 20,
+              "DocumentIndex": 25,
               "Title": "Staff.cs",
               "DocumentMoniker": "C:\\Users\\JIJITHA V\\source\\repos\\Camp6_Project\\FINAL_PROJECT\\CLINICAL_MANAGEMENT_SOLUTION\\CLINICAL_MANAGEMENT\\Models\\Staff.cs",
               "RelativeDocumentMoniker": "CLINICAL_MANAGEMENT\\Models\\Staff.cs",
@@ -390,64 +439,11 @@
               "RelativeToolTip": "CLINICAL_MANAGEMENT\\Models\\Staff.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-25T08:52:51.339Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-03-25T08:52:51.339Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 21,
-              "Title": "LabTechnicianController.cs",
-              "DocumentMoniker": "C:\\Users\\JIJITHA V\\source\\repos\\Camp6_Project\\FINAL_PROJECT\\CLINICAL_MANAGEMENT_SOLUTION\\CLINICAL_MANAGEMENT\\Controllers\\LabTechnicianController.cs",
-              "RelativeDocumentMoniker": "CLINICAL_MANAGEMENT\\Controllers\\LabTechnicianController.cs",
-              "ToolTip": "C:\\Users\\JIJITHA V\\source\\repos\\Camp6_Project\\FINAL_PROJECT\\CLINICAL_MANAGEMENT_SOLUTION\\CLINICAL_MANAGEMENT\\Controllers\\LabTechnicianController.cs",
-              "RelativeToolTip": "CLINICAL_MANAGEMENT\\Controllers\\LabTechnicianController.cs",
-              "ViewState": "AgIAAA8AAAAAAAAAAAAYwFQAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-25T05:29:04.569Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 23,
-              "Title": "ILabTechnicianService.cs",
-              "DocumentMoniker": "C:\\Users\\JIJITHA V\\source\\repos\\Camp6_Project\\FINAL_PROJECT\\CLINICAL_MANAGEMENT_SOLUTION\\CLINICAL_MANAGEMENT\\Services\\ILabTechnicianService.cs",
-              "RelativeDocumentMoniker": "CLINICAL_MANAGEMENT\\Services\\ILabTechnicianService.cs",
-              "ToolTip": "C:\\Users\\JIJITHA V\\source\\repos\\Camp6_Project\\FINAL_PROJECT\\CLINICAL_MANAGEMENT_SOLUTION\\CLINICAL_MANAGEMENT\\Services\\ILabTechnicianService.cs",
-              "RelativeToolTip": "CLINICAL_MANAGEMENT\\Services\\ILabTechnicianService.cs",
-              "ViewState": "AgIAAAgAAAAAAAAAAAAAwBEAAABWAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-25T05:27:05.389Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 22,
-              "Title": "LabTechServiceImpl.cs",
-              "DocumentMoniker": "C:\\Users\\JIJITHA V\\source\\repos\\Camp6_Project\\FINAL_PROJECT\\CLINICAL_MANAGEMENT_SOLUTION\\CLINICAL_MANAGEMENT\\Services\\LabTechServiceImpl.cs",
-              "RelativeDocumentMoniker": "CLINICAL_MANAGEMENT\\Services\\LabTechServiceImpl.cs",
-              "ToolTip": "C:\\Users\\JIJITHA V\\source\\repos\\Camp6_Project\\FINAL_PROJECT\\CLINICAL_MANAGEMENT_SOLUTION\\CLINICAL_MANAGEMENT\\Services\\LabTechServiceImpl.cs",
-              "RelativeToolTip": "CLINICAL_MANAGEMENT\\Services\\LabTechServiceImpl.cs",
-              "ViewState": "AgIAAAcAAAAAAAAAAAAYwDEAAAAFAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-25T05:25:26.516Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 24,
-              "Title": "ILabTechnicianRepository.cs",
-              "DocumentMoniker": "C:\\Users\\JIJITHA V\\source\\repos\\Camp6_Project\\FINAL_PROJECT\\CLINICAL_MANAGEMENT_SOLUTION\\CLINICAL_MANAGEMENT\\Repositories\\ILabTechnicianRepository.cs",
-              "RelativeDocumentMoniker": "CLINICAL_MANAGEMENT\\Repositories\\ILabTechnicianRepository.cs",
-              "ToolTip": "C:\\Users\\JIJITHA V\\source\\repos\\Camp6_Project\\FINAL_PROJECT\\CLINICAL_MANAGEMENT_SOLUTION\\CLINICAL_MANAGEMENT\\Repositories\\ILabTechnicianRepository.cs",
-              "RelativeToolTip": "CLINICAL_MANAGEMENT\\Repositories\\ILabTechnicianRepository.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABoAAABMAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-25T05:04:28.229Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 25,
+              "DocumentIndex": 26,
               "Title": "CmsContext.cs",
               "DocumentMoniker": "C:\\Users\\JIJITHA V\\source\\repos\\Camp6_Project\\FINAL_PROJECT\\CLINICAL_MANAGEMENT_SOLUTION\\CLINICAL_MANAGEMENT\\Models\\CmsContext.cs",
               "RelativeDocumentMoniker": "CLINICAL_MANAGEMENT\\Models\\CmsContext.cs",
@@ -455,8 +451,17 @@
               "RelativeToolTip": "CLINICAL_MANAGEMENT\\Models\\CmsContext.cs",
               "ViewState": "AgIAAPIBAAAAAAAAAAAkwPkBAAA3AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-25T04:15:59.592Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-03-25T04:15:59.592Z"
+            }
+          ]
+        },
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": -1,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
             }
           ]
         }

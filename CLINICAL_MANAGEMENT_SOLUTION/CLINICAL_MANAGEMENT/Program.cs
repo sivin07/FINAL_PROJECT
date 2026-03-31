@@ -3,6 +3,7 @@ using CLINICAL_MANAGEMENT.Models;
 using CLINICAL_MANAGEMENT.Repositories;
 using CLINICAL_MANAGEMENT.Services;
 using Microsoft.EntityFrameworkCore;
+using System.Text.Json.Serialization;
 
 namespace CLINICAL_MANAGEMENT
 {
@@ -18,6 +19,7 @@ namespace CLINICAL_MANAGEMENT
                 {
                     options.JsonSerializerOptions.PropertyNamingPolicy = null;
                     options.JsonSerializerOptions.WriteIndented = true;  // Readability
+                    options.JsonSerializerOptions.ReferenceHandler = ReferenceHandler.IgnoreCycles;
                 });
 
             // Add services to the container.

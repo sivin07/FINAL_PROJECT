@@ -6,6 +6,7 @@ namespace CLINICAL_MANAGEMENT.Repositories
 {
     public class LabTechRepositoryImpl : ILabTechnicianRepository
     {
+        
         private readonly CmsContext _context;
 
         // DI
@@ -15,11 +16,13 @@ namespace CLINICAL_MANAGEMENT.Repositories
         }
 
         #region 1. Get Pending Tests
+
         public async Task<ActionResult<IEnumerable<LabTestPrescription>>> GetPendingTests()
         {
             return await _context.LabTestPrescriptions
                 .Include(p => p.Patient)
                 .Include(p => p.Doctor)
+                    .ThenInclude(d => d.Staff)
                 .Include(p => p.Test)
                 .Where(p => p.Status == "Pending")
                 .ToListAsync();
@@ -27,80 +30,7 @@ namespace CLINICAL_MANAGEMENT.Repositories
 
         #endregion
 
-        #region 2. Add Lab Result
-        public async Task<ActionResult<LabResult>> AddLabResult(LabResult labResult)
-        {
-            try
-            {
-                await _context.LabResults.AddAsync(labResult);
-                await _context.SaveChangesAsync();
-
-                return labResult;
-            }
-            catch (Exception)
-            {
-                return null;
-            }
-        }
-
-        #endregion
-
-        #region 3. Update Prescription Status
-        public async Task<bool> UpdatePrescriptionStatus(int prescriptionId)
-        {
-            var prescription = await _context.LabTestPrescriptions.FindAsync(prescriptionId);
-
-            if (prescription == null)
-                return false;
-
-            prescription.Status = "Completed";
-            prescription.ResultDate = DateTime.Now;
-
-            await _context.SaveChangesAsync();
-            return true;
-        }
-
-        #endregion
-
-        #region 4. Generate Lab Bill
-        public async Task<ActionResult<LabTestResultBill>> GenerateLabBill(LabTestResultBill bill)
-        {
-            try
-            {
-                await _context.LabTestResultBills.AddAsync(bill);
-                await _context.SaveChangesAsync();
-
-                return bill;
-            }
-            catch (Exception)
-            {
-                return null;
-            }
-        }
-
-        #endregion
-
-        #region 5. Get All Lab Reports
-        public async Task<ActionResult<IEnumerable<LabResult>>> GetLabReports()
-        {
-            return await _context.LabResults
-                .Include(r => r.Patient)
-                .Include(r => r.Test)
-                .ToListAsync();
-        }
-
-        #endregion
-
-        #region 6. Get Reports By Patient
-        public async Task<ActionResult<IEnumerable<LabResult>>> GetReportsByPatient(int patientId)
-        {
-            return await _context.LabResults
-                .Include(r => r.Test)
-                .Where(r => r.PatientId == patientId)
-                .ToListAsync();
-        }
-
-        #endregion
+        #region 2. Complete Lab Test (CORE LOGIC)
 
         public async Task<bool> CompleteLabTest(int prescriptionId, LabResult labResult)
         {
@@ -108,33 +38,36 @@ namespace CLINICAL_MANAGEMENT.Repositories
 
             try
             {
-                // STEP 1: Get Prescription
+                // STEP 1: Get Prescription with Test
                 var prescription = await _context.LabTestPrescriptions
                     .Include(p => p.Test)
                     .FirstOrDefaultAsync(p => p.PrescriptionId == prescriptionId);
 
                 if (prescription == null)
-                    return false;
+                    throw new Exception("Prescription not found");
 
-                // Defensive check (don’t allow duplicate completion)
                 if (prescription.Status == "Completed")
-                    return false;
+                    throw new Exception("Test already completed");
 
-                // STEP 2: Insert Lab Result
+                if (prescription.TestId == null)
+                    throw new Exception("Invalid Test");
+
+                // STEP 2: Set system-controlled values
                 labResult.PatientId = prescription.PatientId;
-                labResult.TestId = prescription.TestId ?? 0;
+                labResult.TestId = prescription.TestId.Value;
                 labResult.Date = DateTime.Now;
+
+                // 🔥 Take NormalRange from LabTest
+                labResult.NormalRange = prescription.Test?.NormalRange;
 
                 await _context.LabResults.AddAsync(labResult);
                 await _context.SaveChangesAsync();
 
-                // STEP 3: Auto Generate Bill using LabTest.Price
-                var testPrice = prescription.Test?.Price ?? 0;
-
+                // STEP 3: Generate Bill automatically
                 var bill = new LabTestResultBill
                 {
                     ResultId = labResult.ResultId,
-                    LabTestBill = testPrice
+                    LabTestBill = prescription.Test?.Price ?? 0
                 };
 
                 await _context.LabTestResultBills.AddAsync(bill);
@@ -146,7 +79,7 @@ namespace CLINICAL_MANAGEMENT.Repositories
 
                 await _context.SaveChangesAsync();
 
-                // STEP 5: Commit Transaction
+                // STEP 5: Commit
                 await transaction.CommitAsync();
 
                 return true;
@@ -157,6 +90,32 @@ namespace CLINICAL_MANAGEMENT.Repositories
                 return false;
             }
         }
+
+        #endregion
+
+        #region 3. Get All Lab Reports
+
+        public async Task<ActionResult<IEnumerable<LabResult>>> GetLabReports()
+        {
+            return await _context.LabResults
+                .Include(r => r.Patient)
+                .Include(r => r.Test)
+                .ToListAsync();
+        }
+
+        #endregion
+
+        #region 4. Get Reports By Patient
+
+        public async Task<ActionResult<IEnumerable<LabResult>>> GetReportsByPatient(int patientId)
+        {
+            return await _context.LabResults
+                .Include(r => r.Test)
+                .Where(r => r.PatientId == patientId)
+                .ToListAsync();
+        }
+
+        #endregion
 
     }
 }
