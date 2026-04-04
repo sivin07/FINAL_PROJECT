@@ -1,4 +1,5 @@
-﻿using CLINICAL_MANAGEMENT.Models;
+﻿using CLINICAL_MANAGEMENT.DTOs.LabTech;
+using CLINICAL_MANAGEMENT.Models;
 using CLINICAL_MANAGEMENT.Services;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
@@ -35,31 +36,17 @@ namespace CLINICAL_MANAGEMENT.Controllers
         #region 2. Complete Lab Test
 
         [HttpPost("complete/{prescriptionId}")]
-        public async Task<IActionResult> CompleteLabTest(int prescriptionId, LabResult labResult)
+        public async Task<IActionResult> CompleteLabTest(int prescriptionId, LabTechResultDto dto)
         {
-            try
-            {
-                if (!ModelState.IsValid)
-                    return BadRequest(ModelState);
+            if (!ModelState.IsValid)
+                return BadRequest(ModelState);
 
-                var result = await _labService.CompleteLabTest(prescriptionId, labResult);
+            var result = await _labService.CompleteLabTest(prescriptionId, dto);
 
-                if (!result)
-                    return BadRequest("Lab test could not be completed");
+            if (!result)
+                return BadRequest("Lab test could not be completed");
 
-                return Ok(new
-                {
-                    message = "Lab test completed successfully"
-                });
-            }
-            catch (ArgumentException ex)
-            {
-                return BadRequest(ex.Message);
-            }
-            catch (Exception)
-            {
-                return StatusCode(500, "An error occurred while processing the request");
-            }
+            return Ok("Lab test completed successfully");
         }
 
         #endregion

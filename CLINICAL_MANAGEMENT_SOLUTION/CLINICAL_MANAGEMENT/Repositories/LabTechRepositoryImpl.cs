@@ -1,4 +1,5 @@
-﻿using CLINICAL_MANAGEMENT.Models;
+﻿using CLINICAL_MANAGEMENT.DTOs.LabTech;
+using CLINICAL_MANAGEMENT.Models;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 
@@ -32,7 +33,7 @@ namespace CLINICAL_MANAGEMENT.Repositories
 
         #region 2. Complete Lab Test (CORE LOGIC)
 
-        public async Task<bool> CompleteLabTest(int prescriptionId, LabResult labResult)
+        public async Task<bool> CompleteLabTest(int prescriptionId, LabTechResultDto dto)
         {
             using var transaction = await _context.Database.BeginTransactionAsync();
 
@@ -52,13 +53,20 @@ namespace CLINICAL_MANAGEMENT.Repositories
                 if (prescription.TestId == null)
                     throw new Exception("Invalid Test");
 
-                // STEP 2: Set system-controlled values
-                labResult.PatientId = prescription.PatientId;
-                labResult.TestId = prescription.TestId.Value;
-                labResult.Date = DateTime.Now;
+                // STEP 2: Create LabResult (from DTO + system values)
+                var labResult = new LabResult
+                {
+                    ActualValue = dto.ActualValue,
+                    Remarks = dto.Remarks,
+                    DoctorReview = dto.DoctorReview,
 
-                // 🔥 Take NormalRange from LabTest
-                labResult.NormalRange = prescription.Test?.NormalRange;
+                    PatientId = prescription.PatientId,
+                    TestId = prescription.TestId.Value,
+                    Date = DateTime.Now,
+
+                    // 🔥 from LabTest
+                    NormalRange = prescription.Test?.NormalRange
+                };
 
                 await _context.LabResults.AddAsync(labResult);
                 await _context.SaveChangesAsync();

@@ -1,4 +1,5 @@
-﻿using System;
+﻿
+using System;
 using System.Collections.Generic;
 using System.Text.Json.Serialization;
 
@@ -18,12 +19,16 @@ public partial class Doctor
 
     public decimal? ConsultationFees { get; set; }
 
+
+
     [JsonIgnore]
     public virtual ICollection<Appointment> Appointments { get; set; } = new List<Appointment>();
 
+
+
     public virtual Department? Dept { get; set; }
 
-    [JsonIgnore]
+
     public virtual ICollection<DiagnosisDetail> DiagnosisDetails { get; set; } = new List<DiagnosisDetail>();
 
     [JsonIgnore]
@@ -40,6 +45,9 @@ public partial class Doctor
 
     [JsonIgnore]
     public virtual ICollection<Qualification> Qualifications { get; set; } = new List<Qualification>();
+
+
+ 
 
     public virtual Specialization? Specialization { get; set; }
 

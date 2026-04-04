@@ -1,6 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using CLINICAL_MANAGEMENT.DTOs.Pharmacist;
 using Microsoft.EntityFrameworkCore;
+using System;
+using System.Collections.Generic;
 
 namespace CLINICAL_MANAGEMENT.Models;
 
@@ -52,8 +53,9 @@ public partial class CmsContext : DbContext
     public virtual DbSet<Specialization> Specializations { get; set; }
 
     public virtual DbSet<Staff> Staff { get; set; }
+    public virtual DbSet<SpResultDto> SpResultDtos { get; set; }
 
-  
+
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
         modelBuilder.Entity<Appointment>(entity =>
@@ -153,10 +155,10 @@ public partial class CmsContext : DbContext
             entity.Property(e => e.Qualification)
                 .HasMaxLength(100)
                 .IsUnicode(false);
-
+             
             entity.HasOne(d => d.Dept).WithMany(p => p.Doctors)
-                .HasForeignKey(d => d.DeptId)
-                .HasConstraintName("FK_Doctor_Dept");
+                  .HasForeignKey(d => d.DeptId)
+                   .HasConstraintName("FK_Doctor_Department");
 
             entity.HasOne(d => d.Specialization).WithMany(p => p.Doctors)
                 .HasForeignKey(d => d.SpecializationId)
@@ -506,6 +508,8 @@ public partial class CmsContext : DbContext
                 .OnDelete(DeleteBehavior.ClientSetNull)
                 .HasConstraintName("FK_Staff_Role");
         });
+
+        modelBuilder.Entity<SpResultDto>().HasNoKey();
 
         OnModelCreatingPartial(modelBuilder);
     }

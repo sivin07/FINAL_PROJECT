@@ -1,8 +1,12 @@
-
-using CLINICAL_MANAGEMENT.Models;
+﻿using CLINICAL_MANAGEMENT.Models;
 using CLINICAL_MANAGEMENT.Repositories;
+using CLINICAL_MANAGEMENT.Repository;
+using CLINICAL_MANAGEMENT.Service;
 using CLINICAL_MANAGEMENT.Services;
+using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.IdentityModel.Tokens;
+using System.Text;
 using System.Text.Json.Serialization;
 
 namespace CLINICAL_MANAGEMENT
@@ -13,34 +17,86 @@ namespace CLINICAL_MANAGEMENT
         {
             var builder = WebApplication.CreateBuilder(args);
 
-            // JSON Format
-            builder.Services.AddControllersWithViews()
+            // JSON Configuration
+            builder.Services.AddControllers()
                 .AddJsonOptions(options =>
                 {
                     options.JsonSerializerOptions.PropertyNamingPolicy = null;
                     options.JsonSerializerOptions.WriteIndented = true;  // Readability
-                    options.JsonSerializerOptions.ReferenceHandler = ReferenceHandler.IgnoreCycles;
+                    options.JsonSerializerOptions.Converters.Add(new JsonStringEnumConverter());
+                    options.JsonSerializerOptions.DefaultIgnoreCondition =
+                        JsonIgnoreCondition.WhenWritingNull;
+                    options.JsonSerializerOptions.ReferenceHandler =
+                        ReferenceHandler.IgnoreCycles;
                 });
 
-            // Add services to the container.
+            builder.Services.AddCors(options =>
+            {
+                options.AddPolicy("AllowAngular",
+                    policy =>
+                    {
+                        policy.WithOrigins("http://localhost:4200") // Angular URL
+                              .AllowAnyHeader()
+                              .AllowAnyMethod();
+                    });
+            });
 
-            // 1- DbContext and connection string registration as middleware
+            // DbContext (ONLY ONE)
             builder.Services.AddDbContext<CmsContext>(options =>
-                options.UseSqlServer(builder.Configuration.GetConnectionString("WebApiDBConnection")));
+                options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
 
-            // 2- Service and Repository registration as middleware
+            builder.Services.AddScoped<IAuthRepository, AuthRepoImpl>();
+            builder.Services.AddScoped<IAuthService, AuthServiceImpl>();
+
+            // ───────── Lab Technician Module ─────────
             builder.Services.AddScoped<ILabTechnicianRepository, LabTechRepositoryImpl>();
             builder.Services.AddScoped<ILabTechnicianService, LabTechServiceImpl>();
 
-            builder.Services.AddControllers();
-            // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
+            // ───────── Doctor Module ─────────
+            builder.Services.AddScoped<IDoctorRepository, DoctorRepoImpl>();
+            builder.Services.AddScoped<IDoctorService, DoctorServiceImpl>();
+
+            // ───────── Pharmacist Module ─────────
+            builder.Services.AddScoped<IPharmacistRepository, PharmacistRepoImpl>();
+            builder.Services.AddScoped<IPharmacistService, PharmacistServiceImpl>();
+
+            // ───────── Reception Module ─────────
+            builder.Services.AddScoped<IReceptionRepository, ReceptionRepositoryImpl>();
+            builder.Services.AddScoped<IReceptionService, ReceptionServiceImpl>();
+
+
+
+       
+            var jwtSettings = builder.Configuration.GetSection("Jwt");
+
+            builder.Services.AddAuthentication(options =>
+            {
+                options.DefaultAuthenticateScheme = JwtBearerDefaults.AuthenticationScheme;
+                options.DefaultChallengeScheme = JwtBearerDefaults.AuthenticationScheme;
+            })
+            .AddJwtBearer(options =>
+            {
+                options.TokenValidationParameters = new TokenValidationParameters
+                {
+                    ValidateIssuer = true,
+                    ValidateAudience = true,
+                    ValidateLifetime = true,
+                    ValidateIssuerSigningKey = true,
+
+                    ValidIssuer = jwtSettings["Jwt:Issuer"],
+                    ValidAudience = jwtSettings["Jwt:Audience"],
+                    IssuerSigningKey = new SymmetricSecurityKey(
+                        Encoding.UTF8.GetBytes(builder.Configuration["Jwt:Key"]))
+                };
+            });
+
+            // Swagger
             builder.Services.AddEndpointsApiExplorer();
             builder.Services.AddSwaggerGen();
 
-
             var app = builder.Build();
 
-            // Configure the HTTP request pipeline.
+            // Middleware
             if (app.Environment.IsDevelopment())
             {
                 app.UseSwagger();
@@ -48,12 +104,9 @@ namespace CLINICAL_MANAGEMENT
             }
 
             app.UseHttpsRedirection();
-
+            app.UseCors("AllowAngular");
             app.UseAuthorization();
-
-
             app.MapControllers();
-
             app.Run();
         }
     }

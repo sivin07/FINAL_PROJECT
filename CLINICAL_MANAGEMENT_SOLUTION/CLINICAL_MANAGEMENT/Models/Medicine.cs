@@ -1,4 +1,5 @@
-﻿using System;
+﻿
+using System;
 using System.Collections.Generic;
 using System.Text.Json.Serialization;
 
@@ -21,6 +22,7 @@ public partial class Medicine
     public int? CategoryId { get; set; }
 
     public virtual Category? Category { get; set; }
+
 
     [JsonIgnore]
     public virtual ICollection<IssuedMedicine> IssuedMedicines { get; set; } = new List<IssuedMedicine>();

@@ -1,4 +1,5 @@
-﻿using CLINICAL_MANAGEMENT.Models;
+﻿using CLINICAL_MANAGEMENT.DTOs.LabTech;
+using CLINICAL_MANAGEMENT.Models;
 using Microsoft.AspNetCore.Mvc;
 
 namespace CLINICAL_MANAGEMENT.Services
@@ -9,7 +10,7 @@ namespace CLINICAL_MANAGEMENT.Services
         Task<ActionResult<IEnumerable<LabTestPrescription>>> GetPendingTests();
 
         // Complete lab test (main workflow)
-        Task<bool> CompleteLabTest(int prescriptionId, LabResult labResult);
+        Task<bool> CompleteLabTest(int prescriptionId, LabTechResultDto dto);
 
         // Get all lab reports
         Task<ActionResult<IEnumerable<LabResult>>> GetLabReports();

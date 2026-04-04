@@ -1,4 +1,5 @@
-﻿using System;
+﻿
+using System;
 using System.Collections.Generic;
 using System.Text.Json.Serialization;
 
@@ -21,6 +22,7 @@ public partial class DoctorSlot
     public int? PatientId { get; set; }
 
     [JsonIgnore]
+
     public virtual ICollection<Appointment> Appointments { get; set; } = new List<Appointment>();
 
     public virtual Doctor Doctor { get; set; } = null!;
