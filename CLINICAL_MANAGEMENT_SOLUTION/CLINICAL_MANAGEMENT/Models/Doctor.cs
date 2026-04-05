@@ -47,7 +47,7 @@ public partial class Doctor
     public virtual ICollection<Qualification> Qualifications { get; set; } = new List<Qualification>();
 
 
-    public virtual Department? Department { get; set; }
+    //public virtual Department? Department { get; set; }
 
     public virtual Specialization? Specialization { get; set; }
 

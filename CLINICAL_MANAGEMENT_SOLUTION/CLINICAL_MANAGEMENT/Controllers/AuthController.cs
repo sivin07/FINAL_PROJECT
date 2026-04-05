@@ -11,7 +11,7 @@ namespace CLINICAL_MANAGEMENT.Controllers
     {
         private readonly IAuthService _service;
 
-        // Constructor Injection ✅
+        // Constructor Injection 
         public AuthController(IAuthService service)
         {
             _service = service;
